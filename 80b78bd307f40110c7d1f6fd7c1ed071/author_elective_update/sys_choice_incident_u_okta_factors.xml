@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_okta_factors" table="incident" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_okta_factors</element>
+            <name>incident</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-09 21:10:08</sys_created_on>
+            <sys_id>ba63798c07cd0110c7d1f6fd7c1ed050</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_okta_factors</sys_name>
+            <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+            <sys_update_name>sys_choice_incident_u_okta_factors</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-09 21:10:08</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_okta_factors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Push</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-09 21:10:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9c73b58c07cd0110c7d1f6fd7c1ed010</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-09 21:10:21</sys_updated_on>
+            <value>push</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_okta_factors</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SMS</label>
+            <language>en</language>
+            <name>incident</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-09 21:10:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d063b5cc07cd0110c7d1f6fd7c1ed069</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-09 21:10:08</sys_updated_on>
+            <value>sms</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

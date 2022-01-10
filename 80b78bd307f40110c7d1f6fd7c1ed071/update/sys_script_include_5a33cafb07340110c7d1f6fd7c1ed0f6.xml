@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.OktaCallerVerification</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>OktaCallerVerification</name>
+        <script><![CDATA[var OktaCallerVerification = Class.create();
+OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    getOktaID: function() {
+        //gs.info('in the getOktaID function');
+        var userRef = this.getParameter('sysparm_userref');
+        gs.info('userref is ' + userRef);
+
+        //need to query the user table to get the users userID
+        var grUser = new GlideRecord('sys_user');
+        grUser.get(userRef);
+        var username = grUser.user_name;
+        gs.info('username: ' + username);
+        //
+
+        try {
+            var encodedUsername = encodeURIComponent(username);
+            //gs.print('encoded Username is: ' + encodedUsername);  //debug
+            var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Get User');
+            r.setStringParameter('user_id', encodedUsername);
+
+            //override authentication profile 
+            //authentication type ='basic'/ 'oauth2'
+            //r.setAuthenticationProfile(authentication type, profile name);
+
+            //set a MID server name if one wants to run the message on MID
+            //r.setMIDServer('MY_MID_SERVER');
+
+            //if the message is configured to communicate through ECC queue, either
+            //by setting a MID server or calling executeAsync, one needs to set skip_sensor
+            //to true. Otherwise, one may get an intermittent error that the response body is null
+            //r.setEccParameter('skip_sensor', true);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+
+            //debug
+            gs.info('response: ' + response);
+            gs.info('responseBody: ' + responseBody);
+            gs.info('RESPONSEBODY TYPE OF ' + typeof responseBody);
+            gs.info('httpStatus: ' + httpStatus);
+
+
+            ///////
+        } catch (ex) {
+            var message = ex.message;
+            gs.info(ex);
+        }
+        if (httpStatus == 200) {
+            var jsonParser = new JSONParser();
+            var parsed = jsonParser.parse(responseBody);
+            gs.info('parsed: ' + parsed);
+            gs.info('parsedid = ' + parsed.id);
+            return parsed.id;
+        }
+
+        return 'error';
+
+    },
+
+    getEnrolledFactors: function() {
+        var userId = this.getParameter('sysparm_userId');
+        try {
+            var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'List enrolled Factors');
+            r.setStringParameterNoEscape('userId', userId);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+        } catch (ex) {
+            var message = ex.message;
+        }
+        if (httpStatus == 200) {
+            var jsonParser = new JSONParser();
+            var factors = jsonParser.parse(responseBody); //creates an object..
+            //gs.info('parsed: ' + parsed);
+            //gs.info('parsedid = ' + parsed.id);
+            factors.forEach(function(factor) {
+                gs.info("We reached the factor loop!  " + factor);
+            });
+            //return parsed.id;
+        }
+    },
+
+    type: 'OktaCallerVerification'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-09 03:45:51</sys_created_on>
+        <sys_id>5a33cafb07340110c7d1f6fd7c1ed0f6</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>OktaCallerVerification</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_script_include_5a33cafb07340110c7d1f6fd7c1ed0f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-10 16:35:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

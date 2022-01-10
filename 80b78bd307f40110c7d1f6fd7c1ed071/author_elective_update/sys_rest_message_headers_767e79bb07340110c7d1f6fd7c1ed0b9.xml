@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers">
+    <sys_rest_message_headers action="DELETE">
+        <name>Accept</name>
+        <rest_message display_value="Okta Get User">863e753b07340110c7d1f6fd7c1ed044</rest_message>
+        <sys_class_name>sys_rest_message_headers</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-09 03:20:50</sys_created_on>
+        <sys_id>767e79bb07340110c7d1f6fd7c1ed0b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Accept</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_rest_message_headers_767e79bb07340110c7d1f6fd7c1ed0b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-09 03:20:50</sys_updated_on>
+        <value>application/json</value>
+    </sys_rest_message_headers>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</application>
+        <file_path/>
+        <instance_id>f01daa79db4788d44d2bac44d4961975</instance_id>
+        <instance_name>dev101359</instance_name>
+        <name>sys_rest_message_headers_767e79bb07340110c7d1f6fd7c1ed0b9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_headers"><sys_rest_message_headers action="INSERT_OR_UPDATE"><name>Accept</name><rest_message display_value="Okta Get User">863e753b07340110c7d1f6fd7c1ed044</rest_message><sys_class_name>sys_rest_message_headers</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-09 03:20:50</sys_created_on><sys_id>767e79bb07340110c7d1f6fd7c1ed0b9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Accept</sys_name><sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package><sys_policy/><sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope><sys_update_name>sys_rest_message_headers_767e79bb07340110c7d1f6fd7c1ed0b9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-09 03:20:50</sys_updated_on><value>application/json</value></sys_rest_message_headers></record_update>]]></payload>
+        <payload_hash>-1176522669</payload_hash>
+        <record_name>Accept</record_name>
+        <reverted_from/>
+        <source>86f8875707f40110c7d1f6fd7c1ed0e6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-09 03:20:50</sys_created_on>
+        <sys_id>53aef9bb07340110c7d1f6fd7c1ed0a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e3cda5c580000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-09 03:20:50</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>9baef9bb57340110a03a6fc15fdd1aa4</update_guid>
+        <update_guid_history>9baef9bb57340110a03a6fc15fdd1aa4:-1176522669</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-09 03:21:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_headers">sys_rest_message_headers</sys_db_object>
+        <sys_id>0840f1ad491d4bc98c547896b72e6e01</sys_id>
+        <sys_metadata>767e79bb07340110c7d1f6fd7c1ed0b9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Accept</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_scope_delete display_value="">bc39663def3846b8b2a2f4c5f960c089</sys_scope_delete>
+        <sys_update_name>sys_rest_message_headers_767e79bb07340110c7d1f6fd7c1ed0b9</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_headers_767e79bb07340110c7d1f6fd7c1ed0b9">53aef9bb07340110c7d1f6fd7c1ed0a5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-09 03:21:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

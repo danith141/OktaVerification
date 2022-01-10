@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_version" label="version" language="en" table="var__m_connection_attributes_a939479707f40110c7d1f6fd7c1ed069">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_version</element>
+            <help/>
+            <hint/>
+            <label>version</label>
+            <language>en</language>
+            <name>var__m_connection_attributes_a939479707f40110c7d1f6fd7c1ed069</name>
+            <plural>version</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-07 19:35:26</sys_created_on>
+            <sys_id>449ac7d707f40110c7d1f6fd7c1ed037</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>version</sys_name>
+            <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+            <sys_update_name>sys_documentation_var__m_connection_attributes_a939479707f40110c7d1f6fd7c1ed069_u_version_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-07 19:35:26</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

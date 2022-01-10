@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="67" text_index="true" type="collection">
+        <element choice="1" label="Okta Factors" max_length="40" name="u_okta_factors" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Push" value="push"/>
+                <element inactive_on_update="false" label="SMS" value="sms"/>
+            </choice>
+        </element>
+        <element label="Okta ID" max_length="20" name="u_okta_id" read_only="true" type="string"/>
+    </element>
+</database>
