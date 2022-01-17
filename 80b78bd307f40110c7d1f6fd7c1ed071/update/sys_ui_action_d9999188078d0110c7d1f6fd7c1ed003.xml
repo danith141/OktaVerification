@@ -30,11 +30,15 @@
         <onclick>getUser(g_form.getValue('caller_id'))</onclick>
         <order>100</order>
         <script><![CDATA[function getUser(userRef) {
+	
+	var nvp = g_form.setValue('u_okta_nvp','{}');  //make empty object
+	g_form.clearOptions('u_okta_factors'); //clear the verification methods from the dropdown
+	//g_form.addErrorMessage('trying to figure out name/value pair.. contents - ' + g_form.getValue('u_okta_nvp'));
 	//g_form.addInfoMessage(userRef);
     var ga = new GlideAjax('global.OktaCallerVerification');
     ga.addParam('sysparm_name', 'getOktaID');
     ga.addParam('sysparm_userref', userRef);
-
+	updateStatus(']]>😊<![CDATA[ Attempting to get OktaID for ' + g_form.getDisplayValue('caller_id'));
     ga.getXML(ajaxResponse);
 	
 }
@@ -42,9 +46,10 @@
 function ajaxResponse(response) {
     //var result = serverResponse.responseXML.getElementsByTagName("result");
 	var answer = response.responseXML.documentElement.getAttribute("answer");
+	updateStatus(']]>😊<![CDATA[ OKTA ID response received: ' + answer);
     // var message = result[0].getAttribute("message");
 	g_form.setValue('u_okta_id',answer);
-	
+	updateStatus(']]>😊<![CDATA[ querying okta for users\' factors');
 	var gaFactors = new GlideAjax('global.OktaCallerVerification');
 		gaFactors.addParam('sysparm_name', 'getEnrolledFactors');
 		gaFactors.addParam('sysparm_userId', answer);
@@ -53,7 +58,30 @@ function ajaxResponse(response) {
 
 function factors(response) {
 	var answer = response.responseXML.documentElement.getAttribute("answer");
+	answer = JSON.parse(answer);
+	g_scratchpad.factors = answer;
+	updateStatus(']]>😊<![CDATA[ user factors received..');
 	g_form.addInfoMessage(answer);
+	var factorsJson = {};
+	answer.forEach(function (factor){
+		/*
+		if(factor.factorType == 'push'){
+			g_form.addOption('u_okta_factors','push','Push');
+		}
+		if(factor.factorType == 'token:software:totp'){
+			g_form.addOption('u_okta_factors','sms','SMS');
+		}
+		*/
+		g_form.addOption('u_okta_factors',factor._links.verify.href,factor.factorType);
+		factorsJson[factor.factorType] = factor._links.verify.href;
+	});
+	//factorsJson = JSON.parse(factorsJson);
+	g_form.addInfoMessage(JSON.stringify(factorsJson));
+	g_form.setValue('u_okta_nvp',JSON.stringify(factorsJson));
+}
+
+function updateStatus(status){
+	g_form.setValue('u_okta_status',status);
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -65,7 +93,7 @@ function factors(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -73,7 +101,7 @@ function factors(response) {
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-10 16:41:48</sys_updated_on>
+        <sys_updated_on>2022-01-17 02:31:53</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

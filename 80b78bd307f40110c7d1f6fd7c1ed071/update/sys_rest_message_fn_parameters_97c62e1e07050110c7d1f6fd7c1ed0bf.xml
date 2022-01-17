@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
-        <name>user_id</name>
-        <rest_message_function display_value="Get User">fdeef1fb07340110c7d1f6fd7c1ed022</rest_message_function>
+        <name>userId</name>
+        <rest_message_function display_value="Issue an SMS Factor challenge">21762a1e07050110c7d1f6fd7c1ed03f</rest_message_function>
         <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-01-09 03:23:19</sys_created_on>
-        <sys_id>633fbdbb07340110c7d1f6fd7c1ed012</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>user_id</sys_name>
+        <sys_created_on>2022-01-17 00:40:56</sys_created_on>
+        <sys_id>97c62e1e07050110c7d1f6fd7c1ed0bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>userId</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
-        <sys_update_name>sys_rest_message_fn_parameters_633fbdbb07340110c7d1f6fd7c1ed012</sys_update_name>
+        <sys_update_name>sys_rest_message_fn_parameters_97c62e1e07050110c7d1f6fd7c1ed0bf</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-16 19:21:58</sys_updated_on>
-        <type>xml</type>
-        <value>dnendcd@gmail.com</value>
+        <sys_updated_on>2022-01-17 00:42:13</sys_updated_on>
+        <type>string</type>
+        <value>00u3isyvyuD7X47Dn5d7</value>
     </sys_rest_message_fn_parameters>
 </record_update>

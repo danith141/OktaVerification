@@ -13,13 +13,13 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
     getOktaID: function() {
         //gs.info('in the getOktaID function');
         var userRef = this.getParameter('sysparm_userref');
-        gs.info('userref is ' + userRef);
+        gs.info('getOktaID userref is ' + userRef);
 
         //need to query the user table to get the users userID
         var grUser = new GlideRecord('sys_user');
         grUser.get(userRef);
         var username = grUser.user_name;
-        gs.info('username: ' + username);
+        gs.info('getOktaID username: ' + username);
         //
 
         try {
@@ -46,10 +46,10 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
 
             //debug
-            gs.info('response: ' + response);
-            gs.info('responseBody: ' + responseBody);
-            gs.info('RESPONSEBODY TYPE OF ' + typeof responseBody);
-            gs.info('httpStatus: ' + httpStatus);
+            gs.info('getOktaID response: ' + response);
+            gs.info('getOktaID responseBody: ' + responseBody);
+            gs.info('getOktaID RESPONSEBODY TYPE OF ' + typeof responseBody);
+            gs.info('getOktaID httpStatus: ' + httpStatus);
 
 
             ///////
@@ -60,8 +60,8 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         if (httpStatus == 200) {
             var jsonParser = new JSONParser();
             var parsed = jsonParser.parse(responseBody);
-            gs.info('parsed: ' + parsed);
-            gs.info('parsedid = ' + parsed.id);
+            gs.info('getOktaID parsed: ' + parsed);
+            gs.info('getOktaID parsedid = ' + parsed.id);
             return parsed.id;
         }
 
@@ -71,6 +71,8 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
     getEnrolledFactors: function() {
         var userId = this.getParameter('sysparm_userId');
+        gs.info('getEnrolledFactors userId - ' + userId);
+        var factors = [];
         try {
             var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'List enrolled Factors');
             r.setStringParameterNoEscape('userId', userId);
@@ -78,19 +80,55 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
+            //debug
+            gs.info('getEnrolledFactors response: ' + response);
+            gs.info('getEnrolledFactors responseBody: ' + responseBody);
+            gs.info('getEnrolledFactors httpStatus: ' + httpStatus);
         } catch (ex) {
             var message = ex.message;
         }
         if (httpStatus == 200) {
             var jsonParser = new JSONParser();
-            var factors = jsonParser.parse(responseBody); //creates an object..
+            var oktaFactors = jsonParser.parse(responseBody); //creates an object..
+            //gs.info('getEnrolledFactors responseBody ' + responseBody);
+            gs.info('getEnrolledFactors FACTORS object ' + oktaFactors.toString());
             //gs.info('parsed: ' + parsed);
             //gs.info('parsedid = ' + parsed.id);
-            factors.forEach(function(factor) {
-                gs.info("We reached the factor loop!  " + factor);
-            });
-            //return parsed.id;
+            //oktaFactors.forEach(function(of) {
+            //    gs.info("getEnrolledFactors We reached the factor loop!  " + of);
+            //    var f = {};
+            //    f.factor_type = of.factorType;
+            //    f.
+            //});
+            return responseBody;
         }
+    },
+
+    verifyAndCheck: function() { //SMS and push?
+        var href = this.getParameter('sysparm_href');
+        try {
+            var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Issue an SMS Factor challenge');
+            r.setEndpoint(href); //override the end point
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            //debug
+            gs.info('verifyAndCheck response: ' + response);
+            gs.info('verifyAndCheck responseBody: ' + responseBody);
+            gs.info('verifyAndCheck httpStatus: ' + httpStatus);
+        } catch (ex) {
+            var message = ex.message;
+        }
+        if (httpStatus == 201) {
+            var jsonParser = new JSONParser();
+            var pollUrl = jsonParser.parse(responseBody); //creates an object..
+            gs.info('verifyAndCheck FACTORS object ' + pollUrl.toString());
+
+
+            return pollUrl._links.poll.href;
+        }
+
     },
 
     type: 'OktaCallerVerification'
@@ -99,13 +137,13 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-09 03:45:51</sys_created_on>
         <sys_id>5a33cafb07340110c7d1f6fd7c1ed0f6</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>OktaCallerVerification</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_script_include_5a33cafb07340110c7d1f6fd7c1ed0f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-10 16:35:03</sys_updated_on>
+        <sys_updated_on>2022-01-17 01:01:52</sys_updated_on>
     </sys_script_include>
 </record_update>
