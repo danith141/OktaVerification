@@ -107,6 +107,7 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
     verifyAndCheck: function() { //SMS and push?
         var href = this.getParameter('sysparm_href');
         try {
+
             var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Issue an SMS Factor challenge');
             r.setEndpoint(href); //override the end point
 
@@ -114,21 +115,55 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
             //debug
-            gs.info('verifyAndCheck response: ' + response);
-            gs.info('verifyAndCheck responseBody: ' + responseBody);
-            gs.info('verifyAndCheck httpStatus: ' + httpStatus);
+            gs.info('1 verifyAndCheck response: ' + response);
+            gs.info('2 verifyAndCheck responseBody: ' + responseBody);
+            gs.info('3 verifyAndCheck httpStatus: ' + httpStatus);
         } catch (ex) {
             var message = ex.message;
         }
-        if (httpStatus == 201) {
+        if (httpStatus == 200) { //software totp thing?  get code from device, read back to tech?.. we don't need to call the verify API first for this
             var jsonParser = new JSONParser();
-            var pollUrl = jsonParser.parse(responseBody); //creates an object..
-            gs.info('verifyAndCheck FACTORS object ' + pollUrl.toString());
+            var theResponse = jsonParser.parse(responseBody); //creates an object..
+            gs.info('4 verifyAndCheck FACTORS object ' + theResponse.toString()); // 
+
+            //return theResponse._links.factor_ //TODO
+        }
+        if (httpStatus == 201) { //push and ??
+            var jsonParser = new JSONParser();
+            var theResponse = jsonParser.parse(responseBody); //creates an object..
+            gs.info('4 verifyAndCheck FACTORS object ' + theResponse.toString());
 
 
-            return pollUrl._links.poll.href;
+            return theResponse._links.poll.href;
         }
 
+    },
+    poll: function() {
+        gs.info('in the poll function');
+        var pollUrl = this.getParameter('sysparm_href');
+        var sleepTime = 5000; //sleep for 5 seconds
+        var sleptFor = 0;
+        var checkFor = 30000; //check for up to 30000ms (30 sec)
+        var responded = '';
+
+        var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Issue an SMS Factor challenge');
+        r.setEndpoint(pollUrl); //override the end point
+        while (sleptFor < checkFor) { //&& (responded == '')) { //while it hasn't timed out and responded is blank..
+            gs.info('sleepTime = ' + sleepTime + ' | checkFor = ' + checkFor + ' | sleptFor = ' + sleptFor);
+            gs.sleep(sleepTime);
+            sleptFor += sleepTime;
+            try {
+                var response = r.execute();
+                var responseBody = response.getBody();
+                var httpStatus = response.getStatusCode();
+            } catch (ex) {
+                var message = ex.message; //TODO.. more stuff
+            }
+            var jsonParser = new JSONParser();
+            var theResponse = jsonParser.parse(responseBody); //creates an object..
+            gs.info('1 poll object ' + theResponse.toString());
+        }
+        return theResponse;
     },
 
     type: 'OktaCallerVerification'
@@ -137,13 +172,13 @@ OktaCallerVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-09 03:45:51</sys_created_on>
         <sys_id>5a33cafb07340110c7d1f6fd7c1ed0f6</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>OktaCallerVerification</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_script_include_5a33cafb07340110c7d1f6fd7c1ed0f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-17 01:01:52</sys_updated_on>
+        <sys_updated_on>2022-01-23 19:09:16</sys_updated_on>
     </sys_script_include>
 </record_update>

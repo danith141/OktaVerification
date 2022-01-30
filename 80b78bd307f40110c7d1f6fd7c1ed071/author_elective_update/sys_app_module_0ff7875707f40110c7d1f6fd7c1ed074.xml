@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Okta User Verification">87f7875707f40110c7d1f6fd7c1ed067</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Closed</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>incident</name>
+        <order>5</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>active=false^EQ</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-07 19:24:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0ff7875707f40110c7d1f6fd7c1ed074</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Closed</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_app_module_0ff7875707f40110c7d1f6fd7c1ed074</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-07 19:24:10</sys_updated_on>
+        <timeline_page/>
+        <title>Closed</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</application>
+        <file_path/>
+        <instance_id>f01daa79db4788d44d2bac44d4961975</instance_id>
+        <instance_name>dev101359</instance_name>
+        <name>sys_app_module_0ff7875707f40110c7d1f6fd7c1ed074</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Okta User Verification">87f7875707f40110c7d1f6fd7c1ed067</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Closed</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>incident</name><order>5</order><override_menu_roles>false</override_menu_roles><query>active=false^EQ</query><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-07 19:24:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0ff7875707f40110c7d1f6fd7c1ed074</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Closed</sys_name><sys_overrides/><sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package><sys_policy/><sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope><sys_update_name>sys_app_module_0ff7875707f40110c7d1f6fd7c1ed074</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-07 19:24:10</sys_updated_on><timeline_page/><title>Closed</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-2127176152</payload_hash>
+        <record_name>Closed</record_name>
+        <reverted_from/>
+        <source>d232ea0ba9663010c0a065f439e66147</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-07 19:24:10</sys_created_on>
+        <sys_id>47f7875707f40110c7d1f6fd7c1ed076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e35ff98ef0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-07 19:24:10</sys_updated_on>
+        <type>Module</type>
+        <update_guid>8ff78757a4f4011013902471e7d39d75</update_guid>
+        <update_guid_history>8ff78757a4f4011013902471e7d39d75:-2127176152</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Closed">765be85c07110110c7d1f6fd7c1ed02a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-22 20:49:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>d3c1058c164e4a88b22b0c801614baa4</sys_id>
+        <sys_metadata>0ff7875707f40110c7d1f6fd7c1ed074</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Closed</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_scope_delete display_value="">bc39663def3846b8b2a2f4c5f960c089</sys_scope_delete>
+        <sys_update_name>sys_app_module_0ff7875707f40110c7d1f6fd7c1ed074</sys_update_name>
+        <sys_update_version display_value="sys_app_module_0ff7875707f40110c7d1f6fd7c1ed074">47f7875707f40110c7d1f6fd7c1ed076</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-22 20:49:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

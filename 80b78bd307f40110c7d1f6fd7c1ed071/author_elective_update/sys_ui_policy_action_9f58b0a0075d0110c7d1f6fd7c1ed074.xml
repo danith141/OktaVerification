@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>true</cleared>
+        <disabled>ignore</disabled>
+        <field>u_okta_verification</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-23 16:25:10</sys_created_on>
+        <sys_id>9f58b0a0075d0110c7d1f6fd7c1ed074</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_okta_verification</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9f58b0a0075d0110c7d1f6fd7c1ed074</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-23 16:25:10</sys_updated_on>
+        <table>incident</table>
+        <ui_policy display_value="Hide okta verification field on new/load">293830a0075d0110c7d1f6fd7c1ed020</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</application>
+        <file_path/>
+        <instance_id>f01daa79db4788d44d2bac44d4961975</instance_id>
+        <instance_name>dev101359</instance_name>
+        <name>sys_ui_policy_action_9f58b0a0075d0110c7d1f6fd7c1ed074</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>true</cleared><disabled>ignore</disabled><field>u_okta_verification</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-23 16:25:10</sys_created_on><sys_id>9f58b0a0075d0110c7d1f6fd7c1ed074</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_okta_verification</sys_name><sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package><sys_policy/><sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope><sys_update_name>sys_ui_policy_action_9f58b0a0075d0110c7d1f6fd7c1ed074</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-23 16:25:10</sys_updated_on><table>incident</table><ui_policy display_value="Hide okta verification field on new/load">293830a0075d0110c7d1f6fd7c1ed020</ui_policy><visible>false</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>1966559662</payload_hash>
+        <record_name>u_okta_verification</record_name>
+        <reverted_from/>
+        <source>86f8875707f40110c7d1f6fd7c1ed0e6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-23 16:25:10</sys_created_on>
+        <sys_id>4578f0a0075d0110c7d1f6fd7c1ed0b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e87c178a00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-23 16:25:10</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>0d787460925d0110151fe35b25680c09</update_guid>
+        <update_guid_history>0d787460925d0110151fe35b25680c09:1966559662</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-23 16:32:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>26a92d39740e41f8b5b812865b412324</sys_id>
+        <sys_metadata>9f58b0a0075d0110c7d1f6fd7c1ed074</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_okta_verification</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_scope_delete display_value="">bc39663def3846b8b2a2f4c5f960c089</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_9f58b0a0075d0110c7d1f6fd7c1ed074</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_9f58b0a0075d0110c7d1f6fd7c1ed074">4578f0a0075d0110c7d1f6fd7c1ed0b6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-23 16:32:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

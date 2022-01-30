@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Okta User Verification Data" max_length="40" name="u_okta_user_verification_data" sizeclass="1" type="collection">
+        <element label="Record" max_length="32" name="u_record" type="string"/>
+        <element label="Table" max_length="80" name="u_table" type="table_name"/>
+    </element>
+</database>
