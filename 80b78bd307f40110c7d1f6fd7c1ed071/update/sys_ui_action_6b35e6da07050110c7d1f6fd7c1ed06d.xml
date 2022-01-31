@@ -27,10 +27,18 @@
         <list_style/>
         <messages/>
         <name>Send Okta Verification</name>
-        <onclick>doVerify(g_form.getValue('u_okta_factors'));</onclick>
+        <onclick>verifyIfFactor(g_form.getValue('u_okta_factors'));</onclick>
         <order>100</order>
-        <script><![CDATA[function doVerify(link) {
-	updateStatus(']]>😆<![CDATA[ starting verify function');
+        <script><![CDATA[function verifyIfFactor(factor) {
+	if(factor.indexOf('https:') > -1){ //if an href isn't selected, don't do anything
+	updateStatus(']]>😆<![CDATA[ starting verify function for factor: ' + g_form.getDisplayValue('u_okta_factors')); 
+		doVerify(factor);
+	} else {
+		updateStatus(']]>😡<![CDATA[ choose a factor in the dropdown before clicking the verify button');
+	}
+}
+
+function doVerify(link) {
 	var ga = new GlideAjax('global.OktaUserVerification');
 	ga.addParam('sysparm_name', 'verifyAndCheck');
 	ga.addParam('sysparm_href', link);
@@ -39,7 +47,7 @@
 
 function verifyResponse(response){
 	g_form.addInfoMessage('response from send okta verification is: ' + response);
-	updateStatus(']]>😆<![CDATA[ querying to see if the user hit the button');
+	updateStatus(']]>😐<![CDATA[ querying to see if the user hit the button');
 	var gaPoll = new GlideAjax('global.OktaUserVerification');
 	gaPoll.addParam('sysparm_name', 'poll');
 	gaPoll.addParam('sysparm_href', response);
@@ -65,7 +73,7 @@ function updateStatus(status){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6b35e6da07050110c7d1f6fd7c1ed06d</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Send Okta Verification</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -73,7 +81,7 @@ function updateStatus(status){
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_6b35e6da07050110c7d1f6fd7c1ed06d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-30 18:47:42</sys_updated_on>
+        <sys_updated_on>2022-01-31 00:06:28</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>

@@ -32,10 +32,10 @@
         <script><![CDATA[function getUser(userRef) {
 	
 	var nvp = g_form.setValue('u_okta_nvp','{}');  //make empty object
-	if(g_form.getValue('u_okta_factors') != ''){
+	//if(g_form.getValue('u_okta_factors') != ''){
 		g_form.clearOptions('u_okta_factors'); //clear the verification methods from the dropdown
 		g_form.addOption('u_okta_factors','','-- None --');  //add --none-- back in so the UI policy will work with the verification field
-	}
+	//}
 	//g_form.addErrorMessage('trying to figure out name/value pair.. contents - ' + g_form.getValue('u_okta_nvp'));
 	//g_form.addInfoMessage(userRef);
     var ga = new GlideAjax('global.OktaUserVerification');
@@ -97,7 +97,7 @@ function updateStatus(status){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>57</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -105,7 +105,7 @@ function updateStatus(status){
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-30 17:14:45</sys_updated_on>
+        <sys_updated_on>2022-01-31 00:16:54</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
