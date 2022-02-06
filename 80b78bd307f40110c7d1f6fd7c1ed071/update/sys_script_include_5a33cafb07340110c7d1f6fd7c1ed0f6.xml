@@ -7,7 +7,9 @@
         <client_callable>true</client_callable>
         <description/>
         <name>OktaUserVerification</name>
-        <script><![CDATA[var OktaUserVerification = Class.create();
+        <script><![CDATA[//OktaUserVerification script include
+
+var OktaUserVerification = Class.create();
 OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
     getOktaID: function() {
@@ -126,7 +128,7 @@ OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
             var theResponse = jsonParser.parse(responseBody); //creates an object..
             gs.info('4 verifyAndCheck FACTORS object ' + theResponse.toString()); // 
 
-            //return theResponse._links.factor_ //TODO
+            return theResponse._links.verify.href //this will return the verify link for the sms factor.. that we need to poll to see if the # is correct
         }
         if (httpStatus == 201) { //push and ??
             var jsonParser = new JSONParser();
@@ -179,13 +181,13 @@ OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-09 03:45:51</sys_created_on>
         <sys_id>5a33cafb07340110c7d1f6fd7c1ed0f6</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>OktaUserVerification</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_script_include_5a33cafb07340110c7d1f6fd7c1ed0f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-30 23:54:53</sys_updated_on>
+        <sys_updated_on>2022-02-06 14:45:31</sys_updated_on>
     </sys_script_include>
 </record_update>

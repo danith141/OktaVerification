@@ -4,6 +4,7 @@
             <choice/>
         </element>
         <element label="Okta ID" max_length="20" name="u_okta_id" read_only="true" type="string"/>
+        <element label="Okta log" max_length="20000" name="u_okta_log" read_only="true" type="string_full_utf8"/>
         <element label="Okta Name Value Pair" max_length="4000" name="u_okta_nvp" read_only="true" type="simple_name_values"/>
         <element attributes="edge_encryption_enabled=true" label="Status" max_length="255" name="u_okta_status" read_only="true" type="string_full_utf8"/>
         <element label="Okta Verification" max_length="20" name="u_okta_verification" type="string"/>

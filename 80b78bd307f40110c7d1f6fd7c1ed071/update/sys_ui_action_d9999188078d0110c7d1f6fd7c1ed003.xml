@@ -50,6 +50,8 @@ function ajaxResponse(response) {
     //var result = serverResponse.responseXML.getElementsByTagName("result");
 	var answer = response.responseXML.documentElement.getAttribute("answer");
 	updateStatus(']]>😊<![CDATA[ OKTA ID response received: ' + answer);
+	updateOktaLog(JSON.stringify(answer));
+	
     // var message = result[0].getAttribute("message");
 	g_form.setValue('u_okta_id',answer);
 	updateStatus(']]>😊<![CDATA[ querying okta for users\' factors');
@@ -64,7 +66,8 @@ function factors(response) {
 	answer = JSON.parse(answer);
 	g_scratchpad.factors = answer;
 	updateStatus(']]>😊<![CDATA[ user factors received..');
-	g_form.addInfoMessage(answer);
+	updateOktaLog(answer);
+	//g_form.addInfoMessage(answer);
 	var factorsJson = {};
 	answer.forEach(function (factor){
 		/*
@@ -80,12 +83,20 @@ function factors(response) {
 		factorsJson[factor.factorType] = factor._links.verify.href; //this builds the json string that the 'name/value pair' variable uses to populate itself.// probably not needed except for debugging
 	});
 	//factorsJson = JSON.parse(factorsJson);
-	g_form.addInfoMessage(JSON.stringify(factorsJson)); //
+	//g_form.addInfoMessage(JSON.stringify(factorsJson)); //
 	g_form.setValue('u_okta_nvp',JSON.stringify(factorsJson)); // probably not really needed.. except for debugging
 }
 
 function updateStatus(status){
 	g_form.setValue('u_okta_status',status);
+}
+
+function updateOktaLog(update){
+	var field = 'u_okta_log';
+	var timeNow = '';//new GlideDateTime();  //would need a script include to get the time, or a display business rule
+	var prevValue = g_form.getValue(field);
+	var newValue = "-------------------------------\n" + timeNow + "\n"+ update + "\n" + prevValue;
+	g_form.setValue(field,newValue);
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -97,7 +108,7 @@ function updateStatus(status){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>64</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -105,7 +116,7 @@ function updateStatus(status){
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-31 00:16:54</sys_updated_on>
+        <sys_updated_on>2022-02-06 14:03:35</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

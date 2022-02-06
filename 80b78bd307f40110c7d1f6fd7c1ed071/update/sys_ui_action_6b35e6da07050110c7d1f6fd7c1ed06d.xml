@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.u_okta_factors != ''</condition>
+        <condition>current.u_okta_factors != '' || current.u_okta_factors != '-- None --'</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -27,41 +27,53 @@
         <list_style/>
         <messages/>
         <name>Send Okta Verification</name>
-        <onclick>verifyIfFactor(g_form.getValue('u_okta_factors'));</onclick>
+        <onclick>verifyIfFactor();</onclick>
         <order>100</order>
-        <script><![CDATA[function verifyIfFactor(factor) {
-	if(factor.indexOf('https:') > -1){ //if an href isn't selected, don't do anything
-	updateStatus(']]>😆<![CDATA[ starting verify function for factor: ' + g_form.getDisplayValue('u_okta_factors')); 
-		doVerify(factor);
-	} else {
-		updateStatus(']]>😡<![CDATA[ choose a factor in the dropdown before clicking the verify button');
-	}
+        <script><![CDATA[//Send Okta Verification UI action
+
+function verifyIfFactor() {
+    var factor = g_form.getValue('u_okta_factors');
+    var factorDV = g_form.getDisplayValue('u_okta_factors');
+    if (factor.indexOf('https:') > -1) { //if an href isn't selected, don't do anything
+        updateStatus(']]>😆<![CDATA[ starting verify function for factor: ' + g_form.getDisplayValue('u_okta_factors'));
+        switch (factorDV) {
+            case 'push':
+                doPush(factor);
+                break;
+            default:
+                updateStatus("Verification method isn't set up for this type yet");
+                doPush(factor);
+                break;
+        }
+    } else {
+        updateStatus(']]>😡<![CDATA[ choose a factor in the dropdown before clicking the verify button');
+    }
 }
 
-function doVerify(link) {
-	var ga = new GlideAjax('global.OktaUserVerification');
-	ga.addParam('sysparm_name', 'verifyAndCheck');
-	ga.addParam('sysparm_href', link);
-	ga.getXMLAnswer(verifyResponse);
+function doPush(link) { //sends a push verification to the href, and then polls the response URL
+    var ga = new GlideAjax('global.OktaUserVerification');
+    ga.addParam('sysparm_name', 'verifyAndCheck');
+    ga.addParam('sysparm_href', link);
+    ga.getXMLAnswer(verifyResponse);
 }
 
-function verifyResponse(response){
-	g_form.addInfoMessage('response from send okta verification is: ' + response);
-	updateStatus(']]>😐<![CDATA[ querying to see if the user hit the button');
-	var gaPoll = new GlideAjax('global.OktaUserVerification');
-	gaPoll.addParam('sysparm_name', 'poll');
-	gaPoll.addParam('sysparm_href', response);
-	gaPoll.getXMLAnswer(pollResponse);
+function verifyResponse(response) {
+    g_form.addInfoMessage('response from send okta verification is: ' + response);
+    updateStatus(']]>😐<![CDATA[ querying to see if the user hit the button');
+    var gaPoll = new GlideAjax('global.OktaUserVerification');
+    gaPoll.addParam('sysparm_name', 'poll');
+    gaPoll.addParam('sysparm_href', response);
+    gaPoll.getXMLAnswer(pollResponse);
 }
 
-function pollResponse(response){
-	g_form.addInfoMessage('response from polling ' + response);
-	updateStatus(response);
+function pollResponse(response) {
+    g_form.addInfoMessage('response from polling ' + response);
+    updateStatus(response);
 }
 
 
-function updateStatus(status){
-	g_form.setValue('u_okta_status',status);
+function updateStatus(status) {
+    g_form.setValue('u_okta_status', status);
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -73,7 +85,7 @@ function updateStatus(status){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6b35e6da07050110c7d1f6fd7c1ed06d</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Send Okta Verification</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -81,7 +93,7 @@ function updateStatus(status){
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_6b35e6da07050110c7d1f6fd7c1ed06d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-31 00:06:28</sys_updated_on>
+        <sys_updated_on>2022-02-06 14:35:54</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
