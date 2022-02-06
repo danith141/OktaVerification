@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Okta User Verification">87f7875707f40110c7d1f6fd7c1ed067</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Okta User Verification Data</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>u_okta_user_verification_data</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>u_okta_user_verification_data_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-22 21:16:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3a813c9007510110c7d1f6fd7c1ed022</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Okta User Verification Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_app_module_3a813c9007510110c7d1f6fd7c1ed022</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-22 21:16:29</sys_updated_on>
+        <timeline_page/>
+        <title>Okta User Verification Data</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</application>
+        <file_path/>
+        <instance_id>f01daa79db4788d44d2bac44d4961975</instance_id>
+        <instance_name>dev101359</instance_name>
+        <name>sys_app_module_3a813c9007510110c7d1f6fd7c1ed022</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Okta User Verification">87f7875707f40110c7d1f6fd7c1ed067</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Okta User Verification Data</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>u_okta_user_verification_data</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><roles>u_okta_user_verification_data_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-22 21:16:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3a813c9007510110c7d1f6fd7c1ed022</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Okta User Verification Data</sys_name><sys_overrides/><sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package><sys_policy/><sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope><sys_update_name>sys_app_module_3a813c9007510110c7d1f6fd7c1ed022</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-22 21:16:29</sys_updated_on><timeline_page/><title>Okta User Verification Data</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>2066926681</payload_hash>
+        <record_name>Okta User Verification Data</record_name>
+        <reverted_from/>
+        <source>86f8875707f40110c7d1f6fd7c1ed0e6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-22 21:16:30</sys_created_on>
+        <sys_id>b6813c9007510110c7d1f6fd7c1ed026</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e83a5d3fe0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-22 21:16:30</sys_updated_on>
+        <type>Module</type>
+        <update_guid>fe813c909c5101107c89d0121a5df525</update_guid>
+        <update_guid_history>fe813c909c5101107c89d0121a5df525:2066926681</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Okta User Verification Data">a1cb490107e10110c7d1f6fd7c1ed0fa</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-06 17:22:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>2a1bf2f42d5a432886c7e8c240268e84</sys_id>
+        <sys_metadata>3a813c9007510110c7d1f6fd7c1ed022</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Okta User Verification Data</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_scope_delete display_value="">bc39663def3846b8b2a2f4c5f960c089</sys_scope_delete>
+        <sys_update_name>sys_app_module_3a813c9007510110c7d1f6fd7c1ed022</sys_update_name>
+        <sys_update_version display_value="sys_app_module_3a813c9007510110c7d1f6fd7c1ed022">b6813c9007510110c7d1f6fd7c1ed026</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-06 17:22:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
