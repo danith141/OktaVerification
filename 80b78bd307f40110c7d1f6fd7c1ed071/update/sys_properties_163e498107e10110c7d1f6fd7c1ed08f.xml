@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>The name of the okta server, the part before the .okta.com.  so if you connect to okta with MyServer.Okta.com, you would enter MyServer.&#13;
+This is used to call the REST endpoint.</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>okta.user.verification.okta_server</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-06 17:34:15</sys_created_on>
+        <sys_id>163e498107e10110c7d1f6fd7c1ed08f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>okta.user.verification.okta_server</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_properties_163e498107e10110c7d1f6fd7c1ed08f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-06 17:39:02</sys_updated_on>
+        <type>string</type>
+        <value>dev-13141697</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=163e498107e10110c7d1f6fd7c1ed08f"/>
+</record_update>

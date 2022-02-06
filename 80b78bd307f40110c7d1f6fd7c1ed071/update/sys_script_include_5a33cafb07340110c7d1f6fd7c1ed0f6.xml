@@ -8,186 +8,77 @@
         <description/>
         <name>OktaUserVerification</name>
         <script><![CDATA[//OktaUserVerification script include
-
 var OktaUserVerification = Class.create();
 OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
-    getOktaID: function() {
-        //gs.info('in the getOktaID function');
-        var userRef = this.getParameter('sysparm_userref');
-        gs.info('getOktaID userref is ' + userRef);
+    getOktaID: function() { // This is the initial function that calls the Okta REST API and finds the user ID.  The return will be a JSON object that has the URLs for the other requests
+        //get the properties
+        const server = gs.getProperty('okta.user.verification.okta_server').trim();
+        const api = gs.getProperty('okta.user.verification.okta_api_key').trim();
+        const userRef = this.getParameter('sysparm_userref'); // get the userref from the client script/action
+        this.debugLogger("getOktaID", "0: userRef is: " + userRef);
+        
+        // need to query the userref to get the SN user_id
+        var grUserName = new GlideRecord('sys_user');
+        grUserName.get(userRef);
+        var userName = grUserName.user_name;
+        this.debugLogger("getOktaID", "1: userName is: " + userName);
+        if(userName && server && api){ //we need all these values, otherwise there is nothing to do
+            try {
+                const encodedUserName = encodeURIComponent(userName); //need to encode the username for the rest call
+                var rest = new sn_ws.RESTMessageV2();
+                rest.setHttpMethod('get'); // GET request for this
+                rest.setEndpoint('https://' + server + '.okta.com/api/v1/users/' + encodedUserName ); //create the endpoint
+                this.debugLogger("getOktaID", "2: REST endpoint is: " + rest.getEndpoint());
 
-        //need to query the user table to get the users userID
-        var grUser = new GlideRecord('sys_user');
-        grUser.get(userRef);
-        var username = grUser.user_name;
-        gs.info('getOktaID username: ' + username);
-        //
+                //set the headers
+                rest.setRequestHeader('Accept', 'application/json');
+                rest.setRequestHeader('Authorization', 'SSWS ' + api);
+                rest.setRequestHeader('Content-Type', 'application/json');
 
-        try {
-            var encodedUsername = encodeURIComponent(username);
-            //gs.print('encoded Username is: ' + encodedUsername);  //debug
-            var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Get User');
-            r.setStringParameter('user_id', encodedUsername);
+                //call the API
+                const restResponse = rest.execute();
+                const restResponseBody = restResponse.getBody();
+                const restResponseStatus = restResponse.getStatusCode();
 
-            //override authentication profile 
-            //authentication type ='basic'/ 'oauth2'
-            //r.setAuthenticationProfile(authentication type, profile name);
+                //debugging
+                this.debugLogger("getOktaID", "3a: restResponse is: " + restResponse);
+                this.debugLogger("getOktaID", "3b: restResponseBody is: " + restResponseBody);
+                this.debugLogger("getOktaID", "3c: restResponseStatus is: " + restResponseStatus);
 
-            //set a MID server name if one wants to run the message on MID
-            //r.setMIDServer('MY_MID_SERVER');
-
-            //if the message is configured to communicate through ECC queue, either
-            //by setting a MID server or calling executeAsync, one needs to set skip_sensor
-            //to true. Otherwise, one may get an intermittent error that the response body is null
-            //r.setEccParameter('skip_sensor', true);
-
-            var response = r.execute();
-            var responseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
-
-
-            //debug
-            gs.info('getOktaID response: ' + response);
-            gs.info('getOktaID responseBody: ' + responseBody);
-            gs.info('getOktaID RESPONSEBODY TYPE OF ' + typeof responseBody);
-            gs.info('getOktaID httpStatus: ' + httpStatus);
-
-
-            ///////
-        } catch (ex) {
-            var message = ex.message;
-            gs.info(ex);
-        }
-        if (httpStatus == 200) {
-            var jsonParser = new JSONParser();
-            var parsed = jsonParser.parse(responseBody);
-            gs.info('getOktaID parsed: ' + parsed);
-            gs.info('getOktaID parsedid = ' + parsed.id);
-            return parsed.id;
-        }
-
-        return 'error';
-
-    },
-
-    getEnrolledFactors: function() {
-        var userId = this.getParameter('sysparm_userId');
-        gs.info('getEnrolledFactors userId - ' + userId);
-        var factors = [];
-        try {
-            var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'List enrolled Factors');
-            r.setStringParameterNoEscape('userId', userId);
-
-            var response = r.execute();
-            var responseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
-            //debug
-            gs.info('getEnrolledFactors response: ' + response);
-            gs.info('getEnrolledFactors responseBody: ' + responseBody);
-            gs.info('getEnrolledFactors httpStatus: ' + httpStatus);
-        } catch (ex) {
-            var message = ex.message;
-        }
-        if (httpStatus == 200) {
-            var jsonParser = new JSONParser();
-            var oktaFactors = jsonParser.parse(responseBody); //creates an object..
-            //gs.info('getEnrolledFactors responseBody ' + responseBody);
-            gs.info('getEnrolledFactors FACTORS object ' + oktaFactors.toString());
-            //gs.info('parsed: ' + parsed);
-            //gs.info('parsedid = ' + parsed.id);
-            //oktaFactors.forEach(function(of) {
-            //    gs.info("getEnrolledFactors We reached the factor loop!  " + of);
-            //    var f = {};
-            //    f.factor_type = of.factorType;
-            //    f.
-            //});
-            return responseBody;
-        }
-    },
-
-    verifyAndCheck: function() { //SMS and push?
-        var href = this.getParameter('sysparm_href');
-        try {
-
-            var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Issue an SMS Factor challenge');
-            r.setEndpoint(href); //override the end point
-
-            var response = r.execute();
-            var responseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
-            //debug
-            gs.info('1 verifyAndCheck response: ' + response);
-            gs.info('2 verifyAndCheck responseBody: ' + responseBody);
-            gs.info('3 verifyAndCheck httpStatus: ' + httpStatus);
-        } catch (ex) {
-            var message = ex.message;
-        }
-        if (httpStatus == 200) { //software totp thing?  get code from device, read back to tech?.. we don't need to call the verify API first for this
-            var jsonParser = new JSONParser();
-            var theResponse = jsonParser.parse(responseBody); //creates an object..
-            gs.info('4 verifyAndCheck FACTORS object ' + theResponse.toString()); // 
-
-            return theResponse._links.verify.href //this will return the verify link for the sms factor.. that we need to poll to see if the # is correct
-        }
-        if (httpStatus == 201) { //push and ??
-            var jsonParser = new JSONParser();
-            var theResponse = jsonParser.parse(responseBody); //creates an object..
-            gs.info('4 verifyAndCheck FACTORS object ' + theResponse.toString());
-            gs.info('4 verifyAndCheck FACTORS poll href ' + theResponse._links.poll.href);
-
-
-            return theResponse._links.poll.href;
-        }
-
-    },
-    poll: function() {
-        gs.info('in the poll function');
-        var pollUrl = this.getParameter('sysparm_href');
-        var sleepTime = 5000; //sleep for 5 seconds TIMER
-        var sleptFor = 0; //TIMER
-        var checkFor = 60000; //check for up to 30000ms (30 sec) TIMER //TODO:  Make these properties?
-        var responded = '';
-
-        var r = new sn_ws.RESTMessageV2('global.Okta Verification', 'Poll a factor'); //GET request
-        r.setEndpoint(pollUrl); //override the end point
-        while (responded == '' || responded == 'WAITING') { //while not responded
-            gs.sleep(sleepTime); //sleep for sleeptime (5 sec) TIMER
-            sleptFor += sleepTime; //TIMER
-
-            try { //poll the response
-                var response = r.execute();
-                var responseBody = response.getBody();
-                gs.info('1 poll function responsebody: ' + responseBody);
-                var httpStatus = response.getStatusCode();
             } catch (ex) {
-                var message = ex.message; //TODO.. more stuff
+                gs.info(ex);
             }
-            var jsonParser = new JSONParser();
-            responded = jsonParser.parse(responseBody); //creates an object..
-            responded = responded.factorResult;
 
-            if (sleptFor > checkFor) { //TIMER
-                responded = "Script Timeout"; //TIMER
-            } //TIMER
+            return restResponseBody;
         }
 
-        return responded;
+
+
     },
 
+    debugLogger: function(from, message) {
+        var debug = gs.getProperty('okta.user.verification.debug');
+        var from = from ? from : '';
+        if(debug == 'true' || debug == true){
+            gs.info("DEBUG: " + from + "|" + message);
+        }
+        return true;
+    },
+      
     type: 'OktaUserVerification'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-09 03:45:51</sys_created_on>
         <sys_id>5a33cafb07340110c7d1f6fd7c1ed0f6</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>OktaUserVerification</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_script_include_5a33cafb07340110c7d1f6fd7c1ed0f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-06 14:45:31</sys_updated_on>
+        <sys_updated_on>2022-02-06 20:01:45</sys_updated_on>
     </sys_script_include>
 </record_update>

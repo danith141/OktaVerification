@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Okta User Verification</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-06 17:34:40</sys_created_on>
+        <sys_id>ff8e8d8107e10110c7d1f6fd7c1ed009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Okta User Verification</sys_name>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name>sys_properties_category_ff8e8d8107e10110c7d1f6fd7c1ed009</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-06 17:34:40</sys_updated_on>
+        <title><![CDATA[<p><span style="font-size: 12pt;"><strong>Okta User Verification</strong></span></p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=ff8e8d8107e10110c7d1f6fd7c1ed009"/>
+</record_update>
