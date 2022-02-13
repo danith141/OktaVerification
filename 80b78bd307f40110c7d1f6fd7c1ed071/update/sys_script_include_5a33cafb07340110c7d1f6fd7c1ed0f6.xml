@@ -17,18 +17,18 @@ OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         const api = gs.getProperty('okta.user.verification.okta_api_key').trim();
         const userRef = this.getParameter('sysparm_userref'); // get the userref from the client script/action
         this.debugLogger("getOktaID", "0: userRef is: " + userRef);
-        
+
         // need to query the userref to get the SN user_id
         var grUserName = new GlideRecord('sys_user');
         grUserName.get(userRef);
         var userName = grUserName.user_name;
         this.debugLogger("getOktaID", "1: userName is: " + userName);
-        if(userName && server && api){ //we need all these values, otherwise there is nothing to do
+        if (userName && server && api) { //we need all these values, otherwise there is nothing to do
             try {
                 const encodedUserName = encodeURIComponent(userName); //need to encode the username for the rest call
                 var rest = new sn_ws.RESTMessageV2();
                 rest.setHttpMethod('get'); // GET request for this
-                rest.setEndpoint('https://' + server + '.okta.com/api/v1/users/' + encodedUserName ); //create the endpoint
+                rest.setEndpoint('https://' + server + '.okta.com/api/v1/users/' + encodedUserName); //create the endpoint
                 this.debugLogger("getOktaID", "2: REST endpoint is: " + rest.getEndpoint());
 
                 //set the headers
@@ -40,6 +40,8 @@ OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
                 const restResponse = rest.execute();
                 const restResponseBody = restResponse.getBody();
                 const restResponseStatus = restResponse.getStatusCode();
+                //var userId = JSON.parse(restResponseBody); //we're not going to get the userId from here, we're going to have the client script do it
+                //userId = userId["id"];
 
                 //debugging
                 this.debugLogger("getOktaID", "3a: restResponse is: " + restResponse);
@@ -49,7 +51,7 @@ OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
             } catch (ex) {
                 gs.info(ex);
             }
-
+            //this.getUserFactors(userId);
             return restResponseBody;
         }
 
@@ -57,28 +59,199 @@ OktaUserVerification.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
     },
 
+    getUserFactors: function(userId) {
+        const server = gs.getProperty('okta.user.verification.okta_server').trim();
+        const api = gs.getProperty('okta.user.verification.okta_api_key').trim();
+        var userId = userId ? userId : this.getParameter('sysparm_userid'); // get the userid from glideajax call, otherwise will get it from the function call
+        var rest = new sn_ws.RESTMessageV2();
+
+        this.debugLogger("getUserFactors", "1: REST endpoint is: " + rest.getEndpoint());
+
+
+
+        if (userId && server && api) { //we need all these values, otherwise there is nothing to do
+            try {
+                var rest = new sn_ws.RESTMessageV2();
+                rest.setHttpMethod('get'); // GET request for this
+                rest.setEndpoint('https://' + server + '.okta.com/api/v1/users/' + userId.trim() + '/factors'); //create the endpoint.. https://dev----.okta.com/api/v1/users/${userId}/factors
+                this.debugLogger("getUserFactors", "2: REST endpoint is: " + rest.getEndpoint());
+                //set the headers
+                rest.setRequestHeader('Accept', 'application/json');
+                rest.setRequestHeader('Authorization', 'SSWS ' + api);
+                rest.setRequestHeader('Content-Type', 'application/json');
+                //call the API
+                const restResponse = rest.execute();
+                const restResponseBody = restResponse.getBody();
+                const restResponseStatus = restResponse.getStatusCode();
+                //debugging
+                this.debugLogger("getUserFactors", "3a: restResponse is: " + restResponse);
+                this.debugLogger("getUserFactors", "3b: restResponseBody is: " + restResponseBody);
+                this.debugLogger("getUserFactors", "3c: restResponseStatus is: " + restResponseStatus);
+
+            } catch (ex) {
+                gs.info(ex);
+            }
+            //this.getUserFactors(userId);
+            return restResponseBody; //should be json string
+        }
+    },
+
+    sendPushVerify: function() { //push?
+        const api = gs.getProperty('okta.user.verification.okta_api_key').trim();
+        var href = this.getParameter('sysparm_href');
+        this.debugLogger('sendPushVerify', 'href: ' + href);
+        try {
+            this.debugLogger('sendPushVerify', 'in the try statement');
+            var rest = new sn_ws.RESTMessageV2();
+            rest.setEndpoint(href); //get the endpoint from the input
+            rest.setHttpMethod('post'); // GET request for this
+            rest.setRequestHeader('Accept', 'application/json');
+            rest.setRequestHeader('Authorization', 'SSWS ' + api);
+            rest.setRequestHeader('Content-Type', 'application/json');
+
+            var response = rest.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            //debug
+            this.debugLogger('sendPushVerify', 'response: ' + response);
+            this.debugLogger('sendPushVerify', 'responseBody: ' + responseBody);
+            this.debugLogger('sendPushVerify', 'httpStatus: ' + httpStatus);
+        } catch (ex) {
+            var message = ex.message;
+        }
+
+        if (httpStatus) { //push and ??.. Status — 
+            /* 
+            201 Created. The HTTP 201 Created success status response code indicates 
+            that the request has succeeded and has led to the creation of a resource.
+            */
+            var jsonParser = new JSONParser();
+            var theResponse = jsonParser.parse(responseBody); //creates an object..
+            if (theResponse.factorResult == 'CHALLENGE') {
+                this.debugLogger('sendPushVerify CHALLENGE', '4 FACTORS object ' + theResponse.toString());
+                this.debugLogger('sendPushVerify CHALLENGE', '4 FACTORS poll href ' + theResponse._links.verify.href);
+				return JSON.stringify(theResponse);
+            }
+            this.debugLogger('sendPushVerify', '4 FACTORS object ' + theResponse.toString());
+            this.debugLogger('sendPushVerify', '4 FACTORS poll href ' + theResponse._links.poll.href);
+
+            return theResponse._links.poll.href;
+        }
+        return 'Error';
+
+    },
+
+    poll: function() {
+        const api = gs.getProperty('okta.user.verification.okta_api_key').trim();
+        this.debugLogger('poll function', 'in the poll function');
+        var pollUrl = this.getParameter('sysparm_href');
+        var sleepTime = 5000; //sleep for 5 seconds TIMER
+        var sleptFor = 0; //TIMER
+        var checkFor = 60000; //check for up to 30000ms (30 sec) TIMER //TODO:  Make these properties?
+        var responded = '';
+
+        var rest = new sn_ws.RESTMessageV2();
+        rest.setEndpoint(pollUrl); //override the end point
+        rest.setHttpMethod('get'); // GET request for this
+        rest.setRequestHeader('Accept', 'application/json');
+        rest.setRequestHeader('Authorization', 'SSWS ' + api);
+        rest.setRequestHeader('Content-Type', 'application/json');
+
+        while (responded == '' || responded == 'WAITING') { //while not responded
+            gs.sleep(sleepTime); //sleep for sleeptime (5 sec) TIMER
+            sleptFor += sleepTime; //TIMER
+
+            try { //poll the response
+                var response = rest.execute();
+                var responseBody = response.getBody();
+                this.debugLogger('poll function', '1 responsebody: ' + responseBody);
+                var httpStatus = response.getStatusCode();
+            } catch (ex) {
+                var message = ex.message; //TODO.. more stuff
+            }
+            var jsonParser = new JSONParser();
+            responded = jsonParser.parse(responseBody); //creates an object..
+            responded = responded.factorResult;
+
+            if (sleptFor > checkFor) { //TIMER
+                responded = "Script Timeout"; //TIMER
+            } //TIMER
+        }
+
+        return responded;
+    },
+
+    sendTokenVerify: function() { //push?
+        const api = gs.getProperty('okta.user.verification.okta_api_key').trim();
+        var href = this.getParameter('sysparm_href');
+        var code = this.getParameter('sysparm_code');
+        var reqBodyData = {};
+        reqBodyData.passCode = code;
+        reqBodyData = JSON.stringify(reqBodyData);
+        this.debugLogger('sendPushVerify', 'href: ' + href);
+        try {
+            this.debugLogger('sendPushVerify', 'in the try statement');
+            var rest = new sn_ws.RESTMessageV2();
+            rest.setEndpoint(href); //get the endpoint from the input
+            rest.setHttpMethod('post'); // GET request for this
+            rest.setRequestHeader('Accept', 'application/json');
+            rest.setRequestHeader('Authorization', 'SSWS ' + api);
+            rest.setRequestHeader('Content-Type', 'application/json');
+            rest.setRequestBody(reqBodyData);
+
+            var response = rest.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            //debug
+            this.debugLogger('sendTokenVerify', 'response: ' + response);
+            this.debugLogger('sendTokenVerify', 'responseBody: ' + responseBody);
+            this.debugLogger('sendTokenVerify', 'httpStatus: ' + httpStatus);
+        } catch (ex) {
+            var message = ex.message;
+        }
+
+        if (httpStatus == 200) { //push and ??.. Status — 
+            /* 
+            201 Created. The HTTP 201 Created success status response code indicates 
+            that the request has succeeded and has led to the creation of a resource.
+            */
+            var jsonParser = new JSONParser();
+            var theResponse = jsonParser.parse(responseBody); //creates an object..
+            this.debugLogger('sendTokenVerify', '4 FACTORS object ' + theResponse.toString());
+            this.debugLogger('sendTokenVerify', '4 FACTORS poll href ' + theResponse._links.poll.href);
+
+            return theResponse.factorResult;
+        } else if (httpStatus == 403) { // this returns a JSON object.. we want the errorSummary
+            var theResponse = jsonParser.parse(responseBody);
+            return theResponse.errorSummary;
+        }
+        return 'Error';
+
+    },
+
+
     debugLogger: function(from, message) {
         var debug = gs.getProperty('okta.user.verification.debug');
-        var from = from ? from : '';
-        if(debug == 'true' || debug == true){
+        var from = from ? from : 'oktauserverification';
+        if (debug == 'true' || debug == true) {
             gs.info("DEBUG: " + from + "|" + message);
         }
         return true;
     },
-      
+
     type: 'OktaUserVerification'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-09 03:45:51</sys_created_on>
         <sys_id>5a33cafb07340110c7d1f6fd7c1ed0f6</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name>OktaUserVerification</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_script_include_5a33cafb07340110c7d1f6fd7c1ed0f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-06 20:01:45</sys_updated_on>
+        <sys_updated_on>2022-02-13 21:57:34</sys_updated_on>
     </sys_script_include>
 </record_update>

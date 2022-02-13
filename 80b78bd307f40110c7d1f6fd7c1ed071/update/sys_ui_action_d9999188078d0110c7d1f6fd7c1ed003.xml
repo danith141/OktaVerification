@@ -29,45 +29,56 @@
         <name>Get Okta UserID</name>
         <onclick>getUser(g_form.getValue('caller_id'))</onclick>
         <order>100</order>
-        <script><![CDATA[function getUser(userRef) {
+        <script><![CDATA[// query for okta user ID using SN ID->
+// if valid response and status - ACTIVE, query for users factors ->
+// fill in factor list
+//
+
+
+
+function getUser(userRef) {
 
     var nvp = g_form.setValue('u_okta_nvp', '{}'); //make empty object
 
     g_form.clearOptions('u_okta_factors'); //clear the verification methods from the dropdown
+	g_form.setValue('u_okta_id','');
     g_form.addOption('u_okta_factors', '', '-- None --'); //add --none-- back in so the UI policy will work with the verification field
 
     var ga = new GlideAjax('global.OktaUserVerification');
     ga.addParam('sysparm_name', 'getOktaID');
     ga.addParam('sysparm_userref', userRef);
     updateStatus(']]>😊<![CDATA[ Attempting to get OktaID for ' + g_form.getDisplayBox('caller_id').value);
-    ga.getXMLAnswer(ajaxResponse);
+    ga.getXMLAnswer(getUserResponse);
 
 }
 
-function ajaxResponse(response) {
-	//This will get the JSON result from the user lookup.
-    var answer = JSON.parse(response);  //Transform the JSON into an object to get the values we need..
-	g_form.addInfoMessage(answer);
-    updateStatus(']]>😊<![CDATA[ OKTA ID response received: ' + answer);
+function getUserResponse(response) {
+    //This will get the JSON result from the user lookup.
+	g_form.addInfoMessage(JSON.stringify(response));
+    var answer = JSON.parse(response); //Transform the JSON into an object to get the values we need..
+    
+    updateStatus(']]>😊<![CDATA[ OKTA ID response received');
     //updateOktaLog(JSON.stringify(answer));
-    updateOktaLog(Object.getOwnPropertyNames(answer));  //Log some stuff just because
-    //Object.getOwnPropertyNames(answer).forEach(function (property){ updateOktaLog(property + " : " + answer[property] );  });
+    //updateOktaLog(Object.getOwnPropertyNames(answer));  //Log some stuff just because
+    //Object.getOwnPropertyNames(answer).forEach(function(property) {
+    //    updateOktaLog(property + " : " + answer[property]);
+    //});
     //Object.getOwnPropertyNames(answer).forEach(  //more logging.. this hurt my brain to write and will need to be redone because there are 3 or 4 more layers in the response to parse
-        //function(property) {
-          //  if (typeof answer[property] == 'object') {
-            //    Object.getOwnPropertyNames(answer[property]).forEach(
-              //      function(moreproperty) {
-                //        updateOktaLog("-" + moreproperty + " : " + answer[property][moreproperty]);
-                  //  }
-                //);
-           // } else {
-           //     updateOktaLog(property + " : " + answer[property]);
-            //}
-       // });
-	const oktaId = answer["id"];//(answer["id"] === 'undefined') ? "Error" : answer["id"];
-	g_form.addInfoMessage("OktaId is: " + oktaId);
-	//if(answer["id"])
-g_form.setValue('u_okta_id',oktaId);
+    //function(property) {
+    //  if (typeof answer[property] == 'object') {
+    //    Object.getOwnPropertyNames(answer[property]).forEach(
+    //      function(moreproperty) {
+    //        updateOktaLog("-" + moreproperty + " : " + answer[property][moreproperty]);
+    //  }
+    //);
+    // } else {
+    //     updateOktaLog(property + " : " + answer[property]);
+    //}
+    // });
+    const oktaId = answer["id"]; //(answer["id"] === 'undefined') ? "Error" : answer["id"];
+    g_form.addInfoMessage("OktaId is: " + oktaId);
+    //if(answer["id"])
+    g_form.setValue('u_okta_id', oktaId);
     // var message = result[0].getAttribute("message");
     //g_form.setValue('u_okta_id',answer);
     //updateStatus(']]>😊<![CDATA[ querying okta for users\' factors');
@@ -78,9 +89,10 @@ g_form.setValue('u_okta_id',oktaId);
 }
 
 function factors(response) {
+	//Moved to onChange sclient script - Get Users Factors when OktaID Changes
     var answer = response.responseXML.documentElement.getAttribute("answer");
     answer = JSON.parse(answer);
-    g_scratchpad.factors = answer;
+    //g_scratchpad.factors = answer;
     updateStatus(']]>😊<![CDATA[ user factors received..');
     updateOktaLog(answer);
     //g_form.addInfoMessage(answer);
@@ -116,7 +128,7 @@ function updateOktaLog(update) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>77</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -124,9 +136,9 @@ function updateOktaLog(update) {
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-06 20:44:28</sys_updated_on>
+        <sys_updated_on>2022-02-13 15:09:35</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
-        <ui16_compatible>false</ui16_compatible>
+        <ui16_compatible>true</ui16_compatible>
     </sys_ui_action>
 </record_update>
