@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="u_okta_status" label="Okta Status" language="en" table="incident">
+    <sys_documentation element="u_okta_verification_holding_area" label="Okta verification holding area" language="en" table="incident">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>u_okta_status</element>
+            <element>u_okta_verification_holding_area</element>
             <help/>
             <hint/>
-            <label>Okta Status</label>
+            <label>Okta verification holding area</label>
             <language>en</language>
             <name>incident</name>
-            <plural>Okta Status</plural>
+            <plural>Okta verification holding areas</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-01-16 20:17:19</sys_created_on>
-            <sys_id>297a69de07410110c7d1f6fd7c1ed0cd</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_name>Okta Status</sys_name>
+            <sys_created_on>2022-02-22 21:57:44</sys_created_on>
+            <sys_id>154468d607350110c7d1f6fd7c1ed01b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Okta verification holding area</sys_name>
             <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
             <sys_policy/>
             <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
-            <sys_update_name>sys_documentation_incident_u_okta_status_en</sys_update_name>
+            <sys_update_name>sys_documentation_incident_u_okta_verification_holding_area_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-22 21:56:23</sys_updated_on>
+            <sys_updated_on>2022-02-22 21:57:44</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

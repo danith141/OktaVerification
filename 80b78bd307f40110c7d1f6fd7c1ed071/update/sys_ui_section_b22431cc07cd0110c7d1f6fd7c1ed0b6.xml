@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>c41556d707650110c7d1f6fd7c1ed0c6</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>d604867707310110c7d1f6fd7c1ed0c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>u_okta_id</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>8c1556d707650110c7d1f6fd7c1ed0c6</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>5a04867707310110c7d1f6fd7c1ed0c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,69 +32,97 @@
             <element>u_okta_factors</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>001556d707650110c7d1f6fd7c1ed0c7</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>da04867707310110c7d1f6fd7c1ed0c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_user_verification_help</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>5e04867707310110c7d1f6fd7c1ed0c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>801556d707650110c7d1f6fd7c1ed0c7</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>de04867707310110c7d1f6fd7c1ed0c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_okta_status</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>041556d707650110c7d1f6fd7c1ed0c7</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>5204867707310110c7d1f6fd7c1ed0c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_okta_verification</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>841556d707650110c7d1f6fd7c1ed0c7</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>d204867707310110c7d1f6fd7c1ed0c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_verification_holding_area</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>5604867707310110c7d1f6fd7c1ed0c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>6</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-02-13 22:28:47</sys_created_on>
-            <sys_id>081556d707650110c7d1f6fd7c1ed0c7</sys_id>
+            <sys_created_on>2022-02-27 20:47:03</sys_created_on>
+            <sys_id>d604867707310110c7d1f6fd7c1ed0c3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Verification" display_value="Verification" name="incident" sys_domain="global" view="Default view">b22431cc07cd0110c7d1f6fd7c1ed0b6</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-02-13 22:28:47</sys_updated_on>
+            <sys_updated_on>2022-02-27 20:47:03</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

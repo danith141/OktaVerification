@@ -28,7 +28,7 @@
         <messages/>
         <name>Get Okta UserID</name>
         <onclick>getUser(g_form.getValue('caller_id'))</onclick>
-        <order>100</order>
+        <order>1000</order>
         <script><![CDATA[// query for okta user ID using SN ID->
 // if valid response and status - ACTIVE, query for users factors ->
 // fill in factor list
@@ -38,7 +38,7 @@
 
 function getUser(userRef) {
 
-    var nvp = g_form.setValue('u_okta_nvp', '{}'); //make empty object
+    //var nvp = g_form.setValue('u_okta_nvp', '{}'); //make empty object
 
     g_form.clearOptions('u_okta_factors'); //clear the verification methods from the dropdown
 	g_form.setValue('u_okta_id','');
@@ -128,7 +128,7 @@ function updateOktaLog(update) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>87</sys_mod_count>
+        <sys_mod_count>89</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -136,7 +136,7 @@ function updateOktaLog(update) {
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-13 15:09:35</sys_updated_on>
+        <sys_updated_on>2022-02-27 20:54:03</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
