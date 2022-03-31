@@ -75,7 +75,9 @@ function getUserResponse(response) {
     //     updateOktaLog(property + " : " + answer[property]);
     //}
     // });
-    const oktaId = answer["id"]; //(answer["id"] === 'undefined') ? "Error" : answer["id"];
+	//if(answer["errorSummary"] != '' || answer["errorSummary"] !== undefined){
+    //const oktaId = answer["id"]; 
+	const oktaId = (answer["id"] === undefined  ) ? "Error: User not found!" : answer["id"];
     g_form.addInfoMessage("OktaId is: " + oktaId);
     //if(answer["id"])
     g_form.setValue('u_okta_id', oktaId);
@@ -128,7 +130,7 @@ function updateOktaLog(update) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>89</sys_mod_count>
+        <sys_mod_count>91</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -136,7 +138,7 @@ function updateOktaLog(update) {
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-27 20:54:03</sys_updated_on>
+        <sys_updated_on>2022-03-18 00:03:22</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
