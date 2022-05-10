@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Okta User Verification" section_id="7c8d14c907130110c7d1f6fd7c1ed02d" sys_domain="global" table="incident" version="3" view="workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>8b4e9c0d07130110c7d1f6fd7c1ed074</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_id</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>034e9c0d07130110c7d1f6fd7c1ed075</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_factors</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>874e9c0d07130110c7d1f6fd7c1ed075</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_user_verification_help</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>0f4e9c0d07130110c7d1f6fd7c1ed075</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>834e9c0d07130110c7d1f6fd7c1ed076</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_status</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>0b4e9c0d07130110c7d1f6fd7c1ed076</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_verification</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>8f4e9c0d07130110c7d1f6fd7c1ed076</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_okta_verification_holding_area</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>074e9c0d07130110c7d1f6fd7c1ed077</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:53:25</sys_created_on>
+            <sys_id>8b4e9c0d07130110c7d1f6fd7c1ed077</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Okta User Verification" display_value="Okta User Verification" name="incident" sys_domain="global" view="31f0e20fa9263010c0a065f439e6610b">7c8d14c907130110c7d1f6fd7c1ed02d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:53:25</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Okta User Verification</caption>
+            <header>false</header>
+            <name>incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-04 13:50:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7c8d14c907130110c7d1f6fd7c1ed02d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>incident</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+            <sys_update_name>sys_ui_section_7c8d14c907130110c7d1f6fd7c1ed02d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-04 13:50:00</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace" name="workspace">31f0e20fa9263010c0a065f439e6610b</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -4,13 +4,14 @@
         <active>true</active>
         <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
-
-}]]></client_script_v2>
+    getUser(g_form.getValue('caller_id'));
+}
+]]></client_script_v2>
         <comments/>
         <condition/>
         <form_action>true</form_action>
         <form_button>true</form_button>
-        <form_button_v2>false</form_button_v2>
+        <form_button_v2>true</form_button_v2>
         <form_context_menu>false</form_context_menu>
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
@@ -130,7 +131,7 @@ function updateOktaLog(update) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d9999188078d0110c7d1f6fd7c1ed003</sys_id>
-        <sys_mod_count>91</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>Get Okta UserID</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -138,7 +139,7 @@ function updateOktaLog(update) {
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_ui_action_d9999188078d0110c7d1f6fd7c1ed003</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-18 00:03:22</sys_updated_on>
+        <sys_updated_on>2022-05-04 14:10:46</sys_updated_on>
         <table>incident</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
