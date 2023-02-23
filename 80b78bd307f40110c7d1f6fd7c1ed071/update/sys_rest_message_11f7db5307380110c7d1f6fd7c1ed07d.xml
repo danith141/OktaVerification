@@ -5,23 +5,23 @@
         <basic_auth_password/>
         <basic_auth_profile display_value="Okta dev">35699f9307380110c7d1f6fd7c1ed01f</basic_auth_profile>
         <basic_auth_user/>
-        <description/>
+        <description>legacy, not used anymore. I was originally going to use these for the REST stuff, then just coded them in the script include</description>
         <name>Okta Verification</name>
         <oauth2_profile/>
         <protocol_name/>
-        <rest_endpoint>https://dev-13141697.okta.com/api/v1/users</rest_endpoint>
+        <rest_endpoint>https://dev-blahblahblah.okta.com/api/v1/users</rest_endpoint>
         <sys_class_name>sys_rest_message</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:34:46</sys_created_on>
         <sys_id>11f7db5307380110c7d1f6fd7c1ed07d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Okta Verification</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_rest_message_11f7db5307380110c7d1f6fd7c1ed07d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-09 03:23:07</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:06:27</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mutual_auth>false</use_mutual_auth>
     </sys_rest_message>

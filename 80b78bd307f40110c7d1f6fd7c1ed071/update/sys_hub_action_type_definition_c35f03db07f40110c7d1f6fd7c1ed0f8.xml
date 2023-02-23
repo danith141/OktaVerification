@@ -8,26 +8,25 @@
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
-        <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description/>
-        <ih_action>false</ih_action>
+        <ih_action>true</ih_action>
         <internal_name>okta_get_users</internal_name>
         <label_cache>[{"name":"{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].u_version}}","label":"step➛REST step➛version","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].sn_auth_token}}","label":"step➛REST step➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}}]</label_cache>
-        <latest_snapshot/>
-        <master_snapshot/>
+        <master_snapshot>6b01454c1b1121100d8342e4cc4bcb45</master_snapshot>
         <name>Okta List Users</name>
         <natlang/>
         <outputs/>
-        <state>draft</state>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 19:56:22</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c35f03db07f40110c7d1f6fd7c1ed0f8</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Okta List Users</sys_name>
         <sys_overrides/>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
@@ -35,7 +34,7 @@
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_c35f03db07f40110c7d1f6fd7c1ed0f8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:12</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:08:08</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -49,10 +48,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:14:12</sys_created_on>
         <sys_id>8c73179f07f40110c7d1f6fd7c1ed081</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:12</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FD0c73179f13f401106a90e1168e43795f":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD0c73179f13f401106a90e1168e43795f.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":null,\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"04fd3139-0574-4e8b-be7a-b43b5940d256\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD0c73179f13f401106a90e1168e43795f\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"-1\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_updated_on>2023-02-23 20:07:46</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FD0c73179f13f401106a90e1168e43795f":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD0c73179f13f401106a90e1168e43795f.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"04fd3139-0574-4e8b-be7a-b43b5940d256\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD0c73179f13f401106a90e1168e43795f\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">4073179f07f40110c7d1f6fd7c1ed063</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -88,10 +87,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:14:11</sys_created_on>
         <sys_id>3b63179f07f40110c7d1f6fd7c1ed04d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:11</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:07:46</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3b63179f07f40110c7d1f6fd7c1ed04d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -102,10 +101,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:14:11</sys_created_on>
         <sys_id>8c73179f07f40110c7d1f6fd7c1ed05d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:11</sys_updated_on>
-        <value>[{"id":"00u3isyvyuD7X47Dn5d7","status":"ACTIVE","created":"2022-01-06T22:14:56.000Z","activated":"2022-01-06T22:16:55.000Z","statusChanged":"2022-01-06T22:16:55.000Z","lastLogin":"2022-01-06T22:16:55.000Z","lastUpdated":"2022-01-06T22:16:55.000Z","passwordChanged":"2022-01-06T22:14:56.000Z","type":{"id":"oty2wdf3zmr8FlRO05d7"},"profile":{"firstName":"David","lastName":"Nendza","mobilePhone":null,"secondEmail":null,"login":"Dnendcd@gmail.com","email":"Dnendcd@gmail.com"},"credentials":{"password":{},"emails":[{"value":"Dnendcd@gmail.com","status":"VERIFIED","type":"PRIMARY"}],"provider":{"type":"OKTA","name":"OKTA"}},"_links":{"self":{"href":"https://dev-13141697.okta.com/api/v1/users/00u3isyvyuD7X47Dn5d7"}}},{"id":"00u2wdf44jjCVpIWU5d7","status":"RECOVERY","created":"2021-11-29T12:59:20.000Z","activated":null,"statusChanged":"2021-11-29T20:15:13.000Z","lastLogin":"2022-01-07T18:38:00.000Z","lastUpdated":"2022-01-06T22:22:32.000Z","passwordChanged":"2021-11-29T20:15:15.000Z","type":{"id":"oty2wdf3zmr8FlRO05d7"},"profile":{"firstName":"David","lastName":"Nendza","mobilePhone":null,"secondEmail":null,"login":"david.nendza@gmail.com","email":"david.nendza@gmail.com"},"credentials":{"password":{},"emails":[{"value":"david.nendza@gmail.com","status":"VERIFIED","type":"PRIMARY"}],"recovery_question":{"question":"What is the food you least liked as a child?"},"provider":{"type":"OKTA","name":"OKTA"}},"_links":{"self":{"href":"https://dev-13141697.okta.com/api/v1/users/00u2wdf44jjCVpIWU5d7"}}}]</value>
+        <sys_updated_on>2023-02-23 20:07:46</sys_updated_on>
+        <value>[{"id":"00u3isyvyuD7X47Dn5d7","status":"ACTIVE","created":"2022-01-06T22:14:56.000Z","activated":"2022-01-06T22:16:55.000Z","statusChanged":"2022-01-06T22:16:55.000Z","lastLogin":"2022-01-06T22:16:55.000Z","lastUpdated":"2022-01-06T22:16:55.000Z","passwordChanged":"2022-01-06T22:14:56.000Z","type":{"id":"oty2wdf3zmr8FlRO05d7"},"profile":{"firstName":"David","lastName":"Nendza","mobilePhone":null,"secondEmail":null,"login":"Dnendcd@gmail.com","email":"Dnendcd@gmail.com"},"credentials":{"password":{},"emails":[{"value":"Dnendcd@gmail.com","status":"VERIFIED","type":"PRIMARY"}],"provider":{"type":"OKTA","name":"OKTA"}},"_links":{"self":{"href":"https://dev-13141697.okta.com/api/v1/users/00u3isyvyuD7X47Dn5d7"}}},{"id":"00u2wdf44jjCVpIWU5d7","status":"RECOVERY","created":"2021-11-29T12:59:20.000Z","activated":null,"statusChanged":"2021-11-29T20:15:13.000Z","lastLogin":"2022-01-07T18:38:00.000Z","lastUpdated":"2022-01-06T22:22:32.000Z","passwordChanged":"2021-11-29T20:15:15.000Z","type":{"id":"oty2wdf3zmr8FlRO05d7"},"profile":{"firstName":"David","lastName":"Nendza","mobilePhone":null,"secondEmail":null,"login":"david.nendza@gmail.com","email":"david.nendza@gmail.com"},"credentials":{"password":{},"emails":[{"value":"david.nendza@gmail.com","status":"VERIFIED","type":"PRIMARY"}],"recovery_question":{"question":"What is the food you least liked as a child?"},"provider":{"type":"OKTA","name":"OKTA"}},"_links":{"self":{"href":"https://dev-blahblahblah.okta.com/api/v1/users/00u2wdf44jjCVpIWU5d7"}}}]</value>
         <variable display_value="Sample payload">d335ac0787523300f917e55936cb0b1d</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -160,12 +159,13 @@
         <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
         <value/>
     </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=3b63179f07f40110c7d1f6fd7c1ed04d"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=3b63179f07f40110c7d1f6fd7c1ed04d^sys_idNOT INbb63179f07f40110c7d1f6fd7c1ed054"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>co_type_name=FD3763179fe7f40110eb4e32077e02cf51,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=ebf59193-9da6-45c1-8299-69b012ba1ca2</attributes>
+        <attributes>co_type_name=FD62f0c14c68112110533bd19fef93a22d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=bc38145e-8055-4f42-8160-099518e6e993</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -192,6 +192,7 @@
         <element>root</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -223,14 +224,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:14:11</sys_created_on>
         <sys_id>bb63179f07f40110c7d1f6fd7c1ed054</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:11</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:07:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -238,10 +239,12 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3b63179f07f40110c7d1f6fd7c1ed04d"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_3b63179f07f40110c7d1f6fd7c1ed04d^sys_idNOT IN8c73179f07f40110c7d1f6fd7c1ed059"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>root</element>
@@ -283,10 +286,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:02:15</sys_created_on>
         <sys_id>59b0d31f07f40110c7d1f6fd7c1ed0a0</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:11</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:07:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=59b0d31f07f40110c7d1f6fd7c1ed0a0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -330,6 +333,20 @@
         <sys_updated_on>2022-01-07 20:02:17</sys_updated_on>
         <value>1</value>
         <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>59b0d31f07f40110c7d1f6fd7c1ed0a0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:07:46</sys_created_on>
+        <sys_id>62f0c14c1b1121100d8342e4cc4bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:07:46</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Headers">15288f755bd24110ab933520b881c713</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -490,6 +507,18 @@
         <value>{"type":"ADV_NV","value":[{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Authorization","value":"SSWS {{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].sn_auth_token}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_headers</field>
+        <id>59b0d31f07f40110c7d1f6fd7c1ed0a0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:07:46</sys_created_on>
+        <sys_id>aaf0c14c1b1121100d8342e4cc4bcb24</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:07:46</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>honor_duplicate_query_params</field>
         <id>59b0d31f07f40110c7d1f6fd7c1ed0a0</id>
         <sys_created_by>admin</sys_created_by>
@@ -537,6 +566,7 @@
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=59b0d31f07f40110c7d1f6fd7c1ed0a0"/>
     <sys_hub_step_ext_output action="delete_multiple" query="model=59b0d31f07f40110c7d1f6fd7c1ed0a0^sys_idNOT INd9b0d31f07f40110c7d1f6fd7c1ed0bc,ddb0d31f07f40110c7d1f6fd7c1ed0c3"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -569,6 +599,7 @@
         <element>sn_auth_token</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -582,7 +613,7 @@
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_59b0d31f07f40110c7d1f6fd7c1ed0a0</name>
         <next_element/>
-        <order>7</order>
+        <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -600,14 +631,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:02:16</sys_created_on>
         <sys_id>d9b0d31f07f40110c7d1f6fd7c1ed0bc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:10</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:07:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -615,6 +646,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -650,6 +682,7 @@
         <element>u_version</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -663,7 +696,7 @@
         <model_table>sys_hub_step_instance</model_table>
         <name>var__m_sys_hub_step_ext_output_59b0d31f07f40110c7d1f6fd7c1ed0a0</name>
         <next_element/>
-        <order>8</order>
+        <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -681,14 +714,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-07 20:02:16</sys_created_on>
         <sys_id>ddb0d31f07f40110c7d1f6fd7c1ed0c3</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-07 20:14:10</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:07:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -696,10 +729,12 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=59b0d31f07f40110c7d1f6fd7c1ed0a0"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_59b0d31f07f40110c7d1f6fd7c1ed0a0^sys_idNOT IN19b0d31f07f40110c7d1f6fd7c1ed0c2,59b0d31f07f40110c7d1f6fd7c1ed0c8"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>sn_auth_token</element>
@@ -747,6 +782,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=c35f03db07f40110c7d1f6fd7c1ed0f8"/>
     <sys_hub_action_output action="delete_multiple" query="model=c35f03db07f40110c7d1f6fd7c1ed0f8^sys_idNOT IN4073179f07f40110c7d1f6fd7c1ed063,4c73179f07f40110c7d1f6fd7c1ed069"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -780,6 +816,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -827,10 +864,13 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4073179f07f40110c7d1f6fd7c1ed063"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4073179f07f40110c7d1f6fd7c1ed063"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -863,6 +903,7 @@
         <element_prototype/>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -910,10 +951,14 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4c73179f07f40110c7d1f6fd7c1ed069"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4c73179f07f40110c7d1f6fd7c1ed069"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c35f03db07f40110c7d1f6fd7c1ed0f8"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=c35f03db07f40110c7d1f6fd7c1ed0f8^sys_idNOT IN25b0d31f07f40110c7d1f6fd7c1ed0e6"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
         <action_type_id display_value="Okta List Users">c35f03db07f40110c7d1f6fd7c1ed0f8</action_type_id>
@@ -924,6 +969,9 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2022-01-07 20:02:17</sys_updated_on>
     </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=25b0d31f07f40110c7d1f6fd7c1ed0e6"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_c35f03db07f40110c7d1f6fd7c1ed0f8"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_c35f03db07f40110c7d1f6fd7c1ed0f8"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_c35f03db07f40110c7d1f6fd7c1ed0f8^sys_idNOT IN8473179f07f40110c7d1f6fd7c1ed068,8473179f07f40110c7d1f6fd7c1ed07e"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>__action_status__</element>
@@ -971,4 +1019,1044 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_c35f03db07f40110c7d1f6fd7c1ed0f8"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=c35f03db07f40110c7d1f6fd7c1ed0f8^sys_idNOT IN0d11854c1b1121100d8342e4cc4bcba6"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Okta List Users">c35f03db07f40110c7d1f6fd7c1ed0f8</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"0d11854c1b1121100d8342e4cc4bcba6","name":"plan","plan_signature":null}}</plan>
+        <snapshot>b701454c1b1121100d8342e4cc4bcb91</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0d11854c1b1121100d8342e4cc4bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:12</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>okta_list_users</internal_name>
+        <label_cache>[{"name":"{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].u_version}}","label":"step➛REST step➛version","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].sn_auth_token}}","label":"step➛REST step➛Credential Value","type":"step","ref":"","reference_display":"","base_type":"password2","parent_table_name":"","column_name":"","choices":null,"attributes":{"isLocal":"true"}},{"name":"{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}}]</label_cache>
+        <master>true</master>
+        <name>Okta List Users</name>
+        <natlang/>
+        <outputs/>
+        <parent_action display_value="Okta List Users">c35f03db07f40110c7d1f6fd7c1ed0f8</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6b01454c1b1121100d8342e4cc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:06</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb45</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7301454c1b1121100d8342e4cc4bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">7701454c1b1121100d8342e4cc4bcb82</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb45</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bf01454c1b1121100d8342e4cc4bcb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">f301454c1b1121100d8342e4cc4bcb87</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45^id=6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=6b01454c1b1121100d8342e4cc4bcb45^sys_idNOT IN6b01454c1b1121100d8342e4cc4bcb56,fb01454c1b1121100d8342e4cc4bcb74"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Okta List Users">6b01454c1b1121100d8342e4cc4bcb45</action>
+        <cid>f5802b7e-cc15-4ef4-b12d-134235a319d8</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>REST step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:06</sys_created_on>
+        <sys_id>6b01454c1b1121100d8342e4cc4bcb56</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6b01454c1b1121100d8342e4cc4bcb56"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3301454c1b1121100d8342e4cc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3701454c1b1121100d8342e4cc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>{}</value>
+        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3b01454c1b1121100d8342e4cc4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Headers">15288f755bd24110ab933520b881c713</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7301454c1b1121100d8342e4cc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>a939479707f40110c7d1f6fd7c1ed069</value>
+        <variable display_value="Connection Alias">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7f01454c1b1121100d8342e4cc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bb01454c1b1121100d8342e4cc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>https://dev-13141697.okta.com/</value>
+        <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bf01454c1b1121100d8342e4cc4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f301454c1b1121100d8342e4cc4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value/>
+        <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f701454c1b1121100d8342e4cc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6b01454c1b1121100d8342e4cc4bcb56</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>fb01454c1b1121100d8342e4cc4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>ef751ff07301330025d71afe2ff6a7f9</value>
+        <variable display_value="Retry Policy">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_6b01454c1b1121100d8342e4cc4bcb56^id=6b01454c1b1121100d8342e4cc4bcb56"/>
+    <sys_element_mapping action="delete_multiple" query="id=6b01454c1b1121100d8342e4cc4bcb56"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3301454c1b1121100d8342e4cc4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7f01454c1b1121100d8342e4cc4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bb01454c1b1121100d8342e4cc4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7301454c1b1121100d8342e4cc4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_timeout</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>b701454c1b1121100d8342e4cc4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f701454c1b1121100d8342e4cc4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{"type":"ADV_NV","value":[{"name":"Content-Type","value":"application/json","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"Authorization","value":"SSWS {{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].sn_auth_token}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_headers</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3b01454c1b1121100d8342e4cc4bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>honor_duplicate_query_params</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bf01454c1b1121100d8342e4cc4bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f301454c1b1121100d8342e4cc4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resource_path</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3701454c1b1121100d8342e4cc4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>/api/{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].u_version}}/users</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>retry_policy</field>
+        <id>6b01454c1b1121100d8342e4cc4bcb56</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>fb01454c1b1121100d8342e4cc4bcb6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=6b01454c1b1121100d8342e4cc4bcb56"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=6b01454c1b1121100d8342e4cc4bcb56^sys_idNOT IN7301454c1b1121100d8342e4cc4bcb63,a701454c1b1121100d8342e4cc4bcb5e"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=string,uiTypeLabel=String,uiUniqueId=78919521-84e9-4060-8840-19e8ca7d5e50</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_version</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>version</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="REST step">6b01454c1b1121100d8342e4cc4bcb56</model>
+        <model_id>6b01454c1b1121100d8342e4cc4bcb56</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_6b01454c1b1121100d8342e4cc4bcb56</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:06</sys_created_on>
+        <sys_id>7301454c1b1121100d8342e4cc4bcb63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=1f25c744-82ff-4a82-8a49-0af8912fdbf9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="REST step">6b01454c1b1121100d8342e4cc4bcb56</model>
+        <model_id>6b01454c1b1121100d8342e4cc4bcb56</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_6b01454c1b1121100d8342e4cc4bcb56</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:06</sys_created_on>
+        <sys_id>a701454c1b1121100d8342e4cc4bcb5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6b01454c1b1121100d8342e4cc4bcb56"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_6b01454c1b1121100d8342e4cc4bcb56^sys_idNOT IN7f01454c1b1121100d8342e4cc4bcb61,fb01454c1b1121100d8342e4cc4bcb65"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sn_auth_token</element>
+        <help/>
+        <hint/>
+        <label>Credential Value</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_6b01454c1b1121100d8342e4cc4bcb56</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:06</sys_created_on>
+        <sys_id>7f01454c1b1121100d8342e4cc4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>u_version</element>
+        <help/>
+        <hint/>
+        <label>version</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_6b01454c1b1121100d8342e4cc4bcb56</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:06</sys_created_on>
+        <sys_id>fb01454c1b1121100d8342e4cc4bcb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Okta List Users">6b01454c1b1121100d8342e4cc4bcb45</action>
+        <cid>4012620a-5a13-4736-9ed0-4c4f04bed047</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>JSON Parser step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="JSON Parser">502328c387523300f917e55936cb0bf0</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>fb01454c1b1121100d8342e4cc4bcb74</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fb01454c1b1121100d8342e4cc4bcb74"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fb01454c1b1121100d8342e4cc4bcb74</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3301454c1b1121100d8342e4cc4bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>{"name":"root","children":[{"name":"root_array","children":[{"name":"root_array_object","children":[{"name":"id","children":[],"type":"string","jpath":"$.root_array[*].id","previewValue":"00u3isyvyuD7X47Dn5d7"},{"name":"status","children":[],"type":"string","jpath":"$.root_array[*].status","previewValue":"ACTIVE"},{"name":"created","children":[],"type":"string","jpath":"$.root_array[*].created","previewValue":"2022-01-06T22:14:56.000Z"},{"name":"activated","children":[],"type":"string","jpath":"$.root_array[*].activated","previewValue":"2022-01-06T22:16:55.000Z"},{"name":"statusChanged","children":[],"type":"string","jpath":"$.root_array[*].statusChanged","previewValue":"2022-01-06T22:16:55.000Z"},{"name":"lastLogin","children":[],"type":"string","jpath":"$.root_array[*].lastLogin","previewValue":"2022-01-06T22:16:55.000Z"},{"name":"lastUpdated","children":[],"type":"string","jpath":"$.root_array[*].lastUpdated","previewValue":"2022-01-06T22:16:55.000Z"},{"name":"passwordChanged","children":[],"type":"string","jpath":"$.root_array[*].passwordChanged","previewValue":"2022-01-06T22:14:56.000Z"},{"name":"type","children":[{"name":"id","children":[],"type":"string","jpath":"$.root_array[*].type.id","previewValue":"oty2wdf3zmr8FlRO05d7"}],"type":"object","jpath":"$.root_array[*].type","previewValue":""},{"name":"profile","children":[{"name":"firstName","children":[],"type":"string","jpath":"$.root_array[*].profile.firstName","previewValue":"David"},{"name":"lastName","children":[],"type":"string","jpath":"$.root_array[*].profile.lastName","previewValue":"Nendza"},{"name":"mobilePhone","children":[],"type":"string","jpath":"$.root_array[*].profile.mobilePhone","previewValue":""},{"name":"secondEmail","children":[],"type":"string","jpath":"$.root_array[*].profile.secondEmail","previewValue":""},{"name":"login","children":[],"type":"string","jpath":"$.root_array[*].profile.login","previewValue":"Dnendcd@gmail.com"},{"name":"email","children":[],"type":"string","jpath":"$.root_array[*].profile.email","previewValue":"Dnendcd@gmail.com"}],"type":"object","jpath":"$.root_array[*].profile","previewValue":""},{"name":"credentials","children":[{"name":"password","children":[],"type":"object","jpath":"$.root_array[*].credentials.password","previewValue":""},{"name":"emails","children":[{"name":"emails_object","children":[{"name":"value","children":[],"type":"string","jpath":"$.root_array[*].credentials.emails[*].value","previewValue":"Dnendcd@gmail.com"},{"name":"status","children":[],"type":"string","jpath":"$.root_array[*].credentials.emails[*].status","previewValue":"VERIFIED"},{"name":"type","children":[],"type":"string","jpath":"$.root_array[*].credentials.emails[*].type","previewValue":"PRIMARY"}],"type":"object","jpath":"$.root_array[*].credentials.emails[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].credentials.emails[*]","previewValue":""},{"name":"provider","children":[{"name":"type","children":[],"type":"string","jpath":"$.root_array[*].credentials.provider.type","previewValue":"OKTA"},{"name":"name","children":[],"type":"string","jpath":"$.root_array[*].credentials.provider.name","previewValue":"OKTA"}],"type":"object","jpath":"$.root_array[*].credentials.provider","previewValue":""},{"name":"recovery_question","children":[{"name":"question","children":[],"type":"string","jpath":"$.root_array[*].credentials.recovery_question.question","previewValue":""}],"type":"object","jpath":"$.root_array[*].credentials.recovery_question","previewValue":""}],"type":"object","jpath":"$.root_array[*].credentials","previewValue":""},{"name":"_links","children":[{"name":"self","children":[{"name":"href","children":[],"type":"string","jpath":"$.root_array[*]._links.self.href","previewValue":"https://dev-13141697.okta.com/api/v1/users/00u3isyvyuD7X47Dn5d7"}],"type":"object","jpath":"$.root_array[*]._links.self","previewValue":""}],"type":"object","jpath":"$.root_array[*]._links","previewValue":""}],"type":"object","jpath":"$.root_array[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*]","previewValue":""}],"type":"object","jpath":"$","previewValue":""}</value>
+        <variable display_value="Target">4674240787523300f917e55936cb0b0e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fb01454c1b1121100d8342e4cc4bcb74</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f301454c1b1121100d8342e4cc4bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <value>[{"id":"00u3isyvyuD7X47Dn5d7","status":"ACTIVE","created":"2022-01-06T22:14:56.000Z","activated":"2022-01-06T22:16:55.000Z","statusChanged":"2022-01-06T22:16:55.000Z","lastLogin":"2022-01-06T22:16:55.000Z","lastUpdated":"2022-01-06T22:16:55.000Z","passwordChanged":"2022-01-06T22:14:56.000Z","type":{"id":"oty2wdf3zmr8FlRO05d7"},"profile":{"firstName":"David","lastName":"Nendza","mobilePhone":null,"secondEmail":null,"login":"Dnendcd@gmail.com","email":"Dnendcd@gmail.com"},"credentials":{"password":{},"emails":[{"value":"Dnendcd@gmail.com","status":"VERIFIED","type":"PRIMARY"}],"provider":{"type":"OKTA","name":"OKTA"}},"_links":{"self":{"href":"https://dev-13141697.okta.com/api/v1/users/00u3isyvyuD7X47Dn5d7"}}},{"id":"00u2wdf44jjCVpIWU5d7","status":"RECOVERY","created":"2021-11-29T12:59:20.000Z","activated":null,"statusChanged":"2021-11-29T20:15:13.000Z","lastLogin":"2022-01-07T18:38:00.000Z","lastUpdated":"2022-01-06T22:22:32.000Z","passwordChanged":"2021-11-29T20:15:15.000Z","type":{"id":"oty2wdf3zmr8FlRO05d7"},"profile":{"firstName":"David","lastName":"Nendza","mobilePhone":null,"secondEmail":null,"login":"david.nendza@gmail.com","email":"david.nendza@gmail.com"},"credentials":{"password":{},"emails":[{"value":"david.nendza@gmail.com","status":"VERIFIED","type":"PRIMARY"}],"recovery_question":{"question":"What is the food you least liked as a child?"},"provider":{"type":"OKTA","name":"OKTA"}},"_links":{"self":{"href":"https://dev-blahblahblah.okta.com/api/v1/users/00u2wdf44jjCVpIWU5d7"}}}]</value>
+        <variable display_value="Sample payload">d335ac0787523300f917e55936cb0b1d</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_fb01454c1b1121100d8342e4cc4bcb74^id=fb01454c1b1121100d8342e4cc4bcb74"/>
+    <sys_element_mapping action="delete_multiple" query="id=fb01454c1b1121100d8342e4cc4bcb74"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sample_payload</field>
+        <id>fb01454c1b1121100d8342e4cc4bcb74</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bf01454c1b1121100d8342e4cc4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>source_data</field>
+        <id>fb01454c1b1121100d8342e4cc4bcb74</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>fb01454c1b1121100d8342e4cc4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value>{{step[f5802b7e-cc15-4ef4-b12d-134235a319d8].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_schema</field>
+        <id>fb01454c1b1121100d8342e4cc4bcb74</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3b01454c1b1121100d8342e4cc4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=fb01454c1b1121100d8342e4cc4bcb74"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=fb01454c1b1121100d8342e4cc4bcb74^sys_idNOT INbf01454c1b1121100d8342e4cc4bcb79"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>co_type_name=FD3701454c001121108e118b517bb14377,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=bc38145e-8055-4f42-8160-099518e6e993</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>root</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>root</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="JSON Parser step">fb01454c1b1121100d8342e4cc4bcb74</model>
+        <model_id>fb01454c1b1121100d8342e4cc4bcb74</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_fb01454c1b1121100d8342e4cc4bcb74</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bf01454c1b1121100d8342e4cc4bcb79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fb01454c1b1121100d8342e4cc4bcb74"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_fb01454c1b1121100d8342e4cc4bcb74^sys_idNOT IN7301454c1b1121100d8342e4cc4bcb7d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>root</element>
+        <help/>
+        <hint/>
+        <label>root</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_fb01454c1b1121100d8342e4cc4bcb74</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7301454c1b1121100d8342e4cc4bcb7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_hub_action_output action="delete_multiple" query="model=6b01454c1b1121100d8342e4cc4bcb45^sys_idNOT IN7701454c1b1121100d8342e4cc4bcb82,f301454c1b1121100d8342e4cc4bcb87"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=04fd3139-0574-4e8b-be7a-b43b5940d256</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Okta List Users">6b01454c1b1121100d8342e4cc4bcb45</model>
+        <model_id>6b01454c1b1121100d8342e4cc4bcb45</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>7701454c1b1121100d8342e4cc4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7701454c1b1121100d8342e4cc4bcb82"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7701454c1b1121100d8342e4cc4bcb82"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=0b5d0e02-9843-4bcb-ba82-f07bd2001a27,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Okta List Users">6b01454c1b1121100d8342e4cc4bcb45</model>
+        <model_id>6b01454c1b1121100d8342e4cc4bcb45</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f301454c1b1121100d8342e4cc4bcb87</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f301454c1b1121100d8342e4cc4bcb87"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f301454c1b1121100d8342e4cc4bcb87"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=6b01454c1b1121100d8342e4cc4bcb45^sys_idNOT INbf01454c1b1121100d8342e4cc4bcb90"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Okta List Users">6b01454c1b1121100d8342e4cc4bcb45</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>bf01454c1b1121100d8342e4cc4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=bf01454c1b1121100d8342e4cc4bcb90"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45^sys_idNOT IN3701454c1b1121100d8342e4cc4bcb86,f301454c1b1121100d8342e4cc4bcb8c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>3701454c1b1121100d8342e4cc4bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-23 20:08:07</sys_created_on>
+        <sys_id>f301454c1b1121100d8342e4cc4bcb8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 20:08:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_6b01454c1b1121100d8342e4cc4bcb45"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>c35f03db07f40110c7d1f6fd7c1ed0f8</sys_id>
+        <latest_snapshot>6b01454c1b1121100d8342e4cc4bcb45</latest_snapshot>
+        <compiler_build>glide-utah-12-21-2022__patch0-01-18-2023_01-18-2023_1907.zip</compiler_build>
+    </sys_hub_action_type_definition>
 </record_update>

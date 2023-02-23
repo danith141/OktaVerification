@@ -11,16 +11,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-02-06 17:32:43</sys_created_on>
         <sys_id>0b0ec58107e10110c7d1f6fd7c1ed0cd</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>okta.user.verification.okta_api_key</sys_name>
         <sys_package display_value="Okta User Verification" source="80b78bd307f40110c7d1f6fd7c1ed071">80b78bd307f40110c7d1f6fd7c1ed071</sys_package>
         <sys_policy/>
         <sys_scope display_value="Okta User Verification">80b78bd307f40110c7d1f6fd7c1ed071</sys_scope>
         <sys_update_name>sys_properties_0b0ec58107e10110c7d1f6fd7c1ed0cd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-19 13:23:03</sys_updated_on>
+        <sys_updated_on>2023-02-23 20:02:08</sys_updated_on>
         <type>password2</type>
-        <value>{{gpaes}}qhvof15MWLoUuRJIcBJF86t+en63YaCy6ufYPECjph3eduhzVQRAL4qSax3BGt9K</value>
+        <value/>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=0b0ec58107e10110c7d1f6fd7c1ed0cd"/>
